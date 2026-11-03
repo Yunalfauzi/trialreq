@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,27 +33,24 @@
         html.dark body { background-color: #02161c !important; }
 
         html:not(.dark) .cembung { background: linear-gradient(145deg, #f3efe6, #dedad2) !important; border-top: 1px solid rgba(255, 255, 255, 0.8) !important; border-left: 1px solid rgba(255, 255, 255, 0.6) !important; border-right: 1px solid rgba(0, 0, 0, 0.1) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important; box-shadow: 8px 8px 18px rgba(163, 155, 143, 0.45) !important; border-radius: 1rem; }
-        html.dark .cembung { background: linear-gradient(135deg, #031c23, #010e12) !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; border-left: 1px solid rgba(255, 255, 255, 0.04) !important; border-right: 1px solid rgba(0, 0, 0, 0.7) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.95) !important; box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.98) !important; border-radius: 1rem; }
+        html.dark .cembung { background: linear-gradient(135deg, #031c23, #010e12) !important; border-top: 1px solid rgba(255, 255, 255, 0.08) !important; border-left: 1px solid rgba(255, 255, 255, 0.04) !important; border-right: 1px solid rgba(0, 0, 0, 0.7) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.95) !important; box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.98), -15px -15px 30px rgba(34, 211, 238, 0.03) !important; border-radius: 1rem; }
 
         html:not(.dark) .cekung, html:not(.dark) input, html:not(.dark) select, html:not(.dark) textarea { background: linear-gradient(145deg, #dedad2, #f5f1e8) !important; border-top: 1px solid rgba(0, 0, 0, 0.2) !important; border-left: 1px solid rgba(0, 0, 0, 0.15) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.9) !important; border-right: 1px solid rgba(255, 255, 255, 0.7) !important; box-shadow: inset 5px 5px 12px rgba(163, 155, 143, 0.45) !important; border-radius: 0.5rem; }
-        html.dark .cekung, html.dark input, html.dark select, html.dark textarea { background: linear-gradient(135deg, #01090c, #021a21) !important; border-top: 1px solid rgba(0, 0, 0, 0.98) !important; border-left: 1px solid rgba(0, 0, 0, 0.85) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; border-right: 1px solid rgba(255, 255, 255, 0.02) !important; box-shadow: inset 16px 16px 32px rgba(0, 0, 0, 0.99) !important; border-radius: 0.5rem; }
+        html.dark .cekung, html.dark input, html.dark select, html.dark textarea { background: linear-gradient(135deg, #01090c, #021a21) !important; border-top: 1px solid rgba(0, 0, 0, 0.98) !important; border-left: 1px solid rgba(0, 0, 0, 0.85) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; border-right: 1px solid rgba(255, 255, 255, 0.02) !important; box-shadow: inset 16px 16px 32px rgba(0, 0, 0, 0.99), inset -10px -10px 20px rgba(34, 211, 238, 0.02) !important; border-radius: 0.5rem; }
 
         html:not(.dark) input:focus, html:not(.dark) select:focus, html:not(.dark) textarea:focus { box-shadow: inset 5px 5px 12px rgba(163, 155, 143, 0.45), 0 0 0 2px rgba(6, 182, 212, 0.6) !important; outline: none; }
-        html.dark input:focus, html.dark select:focus, html.dark textarea:focus { box-shadow: inset 16px 16px 32px rgba(0, 0, 0, 0.99), 0 0 0 1px #22d3ee !important; outline: none; }
+        html.dark input:focus, html.dark select:focus, html.dark textarea:focus { box-shadow: inset 16px 16px 32px rgba(0, 0, 0, 0.99), inset -10px -10px 20px rgba(34, 211, 238, 0.02), 0 0 0 1px #22d3ee !important; outline: none; }
 
-        html:not(.dark) select option { background-color: #f3efe6 !important; color: #1e293b !important; font-weight: 900; }
-        html.dark select option { background-color: #02161c !important; color: #f8fafc !important; font-weight: 900; }
-
-        .bg-header-tide-pine { background: linear-gradient(135deg, #04252f 0%, #011218 100%) !important; color: #ecfeff !important; }
-        html.dark header, html.dark aside { background: linear-gradient(135deg, #04252f 0%, #011218 100%) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.7) !important; box-shadow: 0 8px 20px rgba(0,0,0,0.6) !important; }
+        .bg-header-tide-pine, .bg-tide-pine { background: linear-gradient(135deg, #04252f 0%, #011218 100%) !important; color: #ecfeff !important; }
+        html.dark header, html.dark aside { background: linear-gradient(135deg, #04252f 0%, #011218 100%) !important; border-bottom: 1px solid rgba(0, 0, 0, 0.7) !important; box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 -1px 2px rgba(255,255,255,0.02) !important; }
 
         .btn-primary { background: linear-gradient(145deg, #08c1e0, #0c6a85) !important; box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3), inset 1px 1px 2px rgba(255,255,255,0.5) !important; border-top: 1px solid rgba(255,255,255,0.7) !important; border-bottom: 1px solid rgba(0,0,0,0.4) !important; color: #ffffff !important; transition: all 0.2s ease; }
-        html.dark .btn-primary { box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8), inset 1px 1px 2px rgba(255,255,255,0.2) !important; border-top: 1px solid rgba(34, 211, 238, 0.4) !important; border-bottom: 1px solid rgba(0,0,0,0.6) !important; }
-        .btn-primary:active { box-shadow: inset 4px 4px 10px rgba(0,0,0,0.5) !important; transform: translateY(2px); }
+        html.dark .btn-primary { box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.8), -3px -3px 8px rgba(34, 211, 238, 0.15), inset 1px 1px 2px rgba(255,255,255,0.2) !important; border-top: 1px solid rgba(34, 211, 238, 0.4) !important; border-bottom: 1px solid rgba(0,0,0,0.6) !important; }
+        .btn-primary:active { box-shadow: inset 4px 4px 10px rgba(0,0,0,0.5), inset -3px -3px 8px rgba(255,255,255,0.1) !important; transform: translateY(2px); }
         
         .btn-cembung { background: linear-gradient(145deg, #0e7490, #155e75) !important; box-shadow: 4px 4px 10px rgba(0,0,0,0.4), inset 1px 1px 2px rgba(255,255,255,0.4) !important; border-top: 1px solid rgba(255,255,255,0.5) !important; border-bottom: 1px solid rgba(0,0,0,0.5) !important; color: #ecfeff !important; transition: all 0.2s ease; }
         html:not(.dark) .btn-cembung { background: linear-gradient(145deg, #f5f1e8, #dedad2) !important; color: #1e293b !important; box-shadow: 4px 4px 10px rgba(163, 155, 143, 0.4), inset 1px 1px 2px rgba(255,255,255,0.8) !important; border-top: 1px solid rgba(255,255,255,0.9) !important; border-bottom: 1px solid rgba(0,0,0,0.2) !important; }
-        html.dark .btn-cembung { box-shadow: 5px 5px 12px rgba(0,0,0,0.8), inset 1px 1px 2px rgba(255,255,255,0.15) !important; border-top: 1px solid rgba(34,211,238,0.3) !important; }
+        html.dark .btn-cembung { box-shadow: 5px 5px 12px rgba(0,0,0,0.8), -3px -3px 8px rgba(34,211,238,0.1), inset 1px 1px 2px rgba(255,255,255,0.15) !important; border-top: 1px solid rgba(34,211,238,0.3) !important; }
         .btn-cembung:active { box-shadow: inset 4px 4px 10px rgba(0,0,0,0.6) !important; transform: translateY(2px); }
 
         .btn-cekung-gelap { background: linear-gradient(145deg, #dedad2, #f5f1e8) !important; border-top: 1px solid rgba(0, 0, 0, 0.15) !important; border-left: 1px solid rgba(0, 0, 0, 0.1) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.9) !important; border-right: 1px solid rgba(255, 255, 255, 0.7) !important; box-shadow: inset 4px 4px 10px rgba(163, 155, 143, 0.4) !important; border-radius: 0.5rem; color: #0e7490; }
@@ -64,11 +62,11 @@
         .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; }
         input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
         input[type=number] { -moz-appearance: textfield; }
-        .modern-select { transition: all 0.15s ease; }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-3px); } 100% { transform: translateY(0px); } }
         .animate-float { animation: float 3s ease-in-out infinite; }
         body:not(.admin-mode) .admin-only { display: none !important; }
-        .table-container { padding-bottom: 1rem; }
+        .btn-view-all-active { background-color: #cffafe !important; color: #155e75 !important; border-color: #67e8f9 !important; }
+        .dark .btn-view-all-active { background-color: #0e7490 !important; color: #ecfeff !important; border-color: #0891b2 !important; }
     </style>
 </head>
 
@@ -135,10 +133,9 @@
 
     <main class="flex-1 w-full px-3 sm:px-6 lg:px-8 py-5 overflow-x-hidden">
         
-        <!-- INPUT TAB -->
         <section id="tab-input" class="tab-content w-full space-y-5">
             <div class="cembung overflow-hidden transition-all w-full relative z-10 border-0 p-0">
-                <div class="bg-header-tide-pine p-3 border-b border-transparent dark:border-black/50 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-t-2xl sm:rounded-t-2xl shadow-sm">
+                <div class="bg-tide-pine p-3 border-b border-transparent dark:border-black/50 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-t-2xl shadow-sm">
                     <h2 class="text-xs sm:text-sm font-black flex items-center gap-2 text-white"><i class="fa-solid fa-file-circle-plus text-brand-300"></i> Portal Interaktif</h2>
                     <div class="flex bg-black/30 dark:bg-black/50 p-1 rounded-full w-full sm:w-auto relative items-center shadow-inner">
                         <button type="button" onclick="setFormType('reguler')" id="btnFormReguler" class="flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full bg-[#08c1e0] text-slate-900 shadow-md transition-all duration-150"><i class="fa-solid fa-box-archive mr-1"></i> Retur / EA</button>
@@ -148,12 +145,14 @@
 
                 <!-- Form 1: Retur / EA -->
                 <form id="requestForm" class="p-4 sm:p-5" onsubmit="handleFormSubmit(event)" autocomplete="off">
+                    <!-- ISI FORM SAMA DENGAN VERSI SEBELUMNYA -->
                     <div class="grid grid-cols-1 xl:grid-cols-12 gap-4">
                         <div class="xl:col-span-6 space-y-4">
                             <div class="flex items-center gap-2 pb-2 border-b border-slate-400/30 dark:border-slate-700/50">
                                 <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black">1</div>
                                 <h3 class="font-black text-xs text-slate-800 dark:text-slate-200">Input Permintaan Retur / EA</h3>
                             </div>
+                            
                             <div>
                                 <label class="block text-[11px] font-black text-slate-700 dark:text-slate-400 uppercase mb-1">Kode Site <span class="text-rose-500">*</span></label>
                                 <div class="relative">
@@ -164,28 +163,33 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
                                     <label class="block text-[11px] font-black text-slate-700 dark:text-slate-400 uppercase mb-1">Tujuan <span class="text-rose-500">*</span></label>
-                                    <select id="inputTujuan" onchange="onTujuanChange()" required class="modern-select cekung w-full px-2.5 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200"><option value="" disabled selected hidden>PILIH...</option><option value="Retur">📦 Retur</option><option value="Endless Aisle">🛒 Endless Aisle</option></select>
+                                    <select id="inputTujuan" onchange="onTujuanChange()" required autocomplete="off" class="modern-select cekung w-full px-2.5 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200">
+                                        <option value="" disabled selected hidden>PILIH...</option><option value="Retur">📦 Retur</option><option value="Endless Aisle">🛒 Endless Aisle</option>
+                                    </select>
                                 </div>
                                 <div>
                                     <label class="block text-[11px] font-black text-slate-700 dark:text-slate-400 uppercase mb-1">Pengiriman <span class="text-rose-500">*</span></label>
-                                    <select id="inputPengiriman" onchange="onPengirimanChange()" required class="modern-select cekung w-full px-2.5 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200"><option value="" disabled selected hidden>PILIH...</option><option value="CSS / JNE">🚚 CSS / JNE</option><option value="J&T">📦 J&T</option><option value="SPX">⚡ SPX</option><option value="Pickup RA">🏪 Pickup RA</option><option value="Pickup Cust">🤝 Pickup Cust</option><option value="Gosend">🛵 Gosend</option><option value="Grab">🚗 Grab</option><option value="Lalamove">🚐 Lalamove</option><option value="Lainnya">❓ Lainnya</option></select>
+                                    <select id="inputPengiriman" onchange="onPengirimanChange()" required autocomplete="off" class="modern-select cekung w-full px-2.5 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200">
+                                        <option value="" disabled selected hidden>PILIH...</option><option value="CSS / JNE">🚚 CSS / JNE</option><option value="J&T">📦 J&T</option><option value="SPX">⚡ SPX</option><option value="Pickup RA">🏪 Pickup RA</option><option value="Pickup Cust">🤝 Pickup Cust</option><option value="Gosend">🛵 Gosend</option><option value="Grab">🚗 Grab</option><option value="Lalamove">🚐 Lalamove</option><option value="Lainnya">❓ Lainnya</option>
+                                    </select>
                                 </div>
                             </div>
+                            
                             <div class="pt-3 border-t border-slate-400/20 dark:border-slate-700/30">
                                 <div class="flex items-center justify-between mb-2">
                                     <label class="block text-[11px] font-black text-slate-700 dark:text-slate-400 uppercase">Daftar Artikel <span class="text-rose-500">*</span></label>
-                                    <button type="button" onclick="addDynamicSkuRow()" class="text-[10px] font-black bg-brand-500/10 text-brand-600 dark:text-brand-400 px-2 py-1 rounded border border-brand-500/20 hover:bg-brand-500 transition-colors flex items-center gap-1"><i class="fa-solid fa-plus"></i> Tambah Artikel</button>
+                                    <button type="button" onclick="addDynamicSkuRow()" class="text-[10px] font-black bg-brand-500/10 text-brand-600 dark:text-brand-400 px-2 py-1 rounded border border-brand-500/20 hover:bg-brand-500/20 transition-colors flex items-center gap-1 shadow-sm"><i class="fa-solid fa-plus"></i> Tambah Artikel</button>
                                 </div>
                                 <div id="dynamicSkuContainer" class="space-y-3">
                                     <div class="sku-item-row flex items-start gap-3 p-3 cekung border border-slate-300/30 dark:border-slate-700/30 rounded-xl relative">
                                         <div class="flex-1 relative">
                                             <label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">SKU Code</label>
-                                            <input type="text" required placeholder="INPUT SKU" oninput="onDynamicSkuChange()" class="dyn-sku-code cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200">
+                                            <input type="text" required autocomplete="off" spellcheck="false" placeholder="INPUT SKU" oninput="onDynamicSkuChange()" class="dyn-sku-code cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200">
                                             <span class="dyn-match-badge hidden absolute right-3 top-7 text-sm text-emerald-500"><i class="fa-solid fa-circle-check"></i></span>
                                         </div>
                                         <div class="w-20 sm:w-24">
                                             <label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">Qty</label>
-                                            <input type="number" required min="1" placeholder="0" oninput="onDynamicSkuChange()" class="dyn-qty cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200">
+                                            <input type="number" required min="1" placeholder="0" oninput="onDynamicSkuChange()" autocomplete="off" class="dyn-qty cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200">
                                         </div>
                                     </div>
                                 </div>
@@ -194,19 +198,21 @@
 
                         <div class="xl:col-span-6 space-y-4 cembung p-4 flex flex-col justify-between ml-0 xl:ml-4 border border-slate-300/30 dark:border-slate-700/30">
                             <div>
-                                <div class="flex items-center gap-2 pb-2 border-b border-slate-400/30 dark:border-slate-700/50">
-                                    <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black">2</div>
-                                    <h3 class="font-black text-xs text-slate-800 dark:text-slate-200">Detail Data</h3>
+                                <div class="flex items-center justify-between pb-2 border-b border-slate-400/30 dark:border-slate-700/50">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black">2</div>
+                                        <h3 class="font-black text-xs text-slate-800 dark:text-slate-200">Detail Data</h3>
+                                    </div>
                                 </div>
                                 <div class="space-y-3 mt-3 text-xs">
                                     <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 pb-3 border-b border-slate-400/20 dark:border-slate-700/30">
-                                        <div class="sm:col-span-3"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-store text-brand-500"></i> Kode Site</label><div id="respDetailKodeSite" class="cekung px-3 py-2 font-mono font-black text-slate-500 flex items-center min-h-[36px]">--</div></div>
-                                        <div class="sm:col-span-5"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1">Site Name</label><div id="respDetailSiteName" class="cekung px-3 py-2 font-black text-slate-500 flex items-center min-h-[36px]">--</div></div>
-                                        <div class="sm:col-span-4"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-code-branch text-brand-500"></i> Branch</label><div id="respDetailBranch" class="cekung px-3 py-2 font-black text-slate-500 flex items-center min-h-[36px]">--</div></div>
+                                        <div class="sm:col-span-3"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-store text-brand-500"></i> Kode Site</label><div id="respDetailKodeSite" class="cekung px-3 py-2 font-mono font-black text-slate-500 break-words flex items-center min-h-[36px]">--</div></div>
+                                        <div class="sm:col-span-5"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1">Site Name</label><div id="respDetailSiteName" class="cekung px-3 py-2 font-black text-slate-500 break-words flex items-center min-h-[36px]">--</div></div>
+                                        <div class="sm:col-span-4"><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-code-branch text-brand-500"></i> Branch</label><div id="respDetailBranch" class="cekung px-3 py-2 font-black text-slate-500 break-words flex items-center min-h-[36px]">--</div></div>
                                     </div>
                                     <div class="grid grid-cols-2 gap-3 pb-3 border-b border-slate-400/20 dark:border-slate-700/30">
-                                        <div><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-bullseye text-brand-500"></i> Tujuan</label><div id="respTujuanSubmit" class="cekung px-3 py-2 font-black text-slate-500 flex items-center min-h-[36px]">--</div></div>
-                                        <div><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-paper-plane text-brand-500"></i> Pengiriman</label><div id="respPengirimanSubmit" class="cekung px-3 py-2 font-black text-slate-500 flex items-center min-h-[36px]">--</div></div>
+                                        <div><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-bullseye text-brand-500"></i> Tujuan</label><div id="respTujuanSubmit" class="cekung px-3 py-2 font-black text-slate-500 break-words flex items-center min-h-[36px]">--</div></div>
+                                        <div><label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1"><i class="fa-solid fa-paper-plane text-brand-500"></i> Pengiriman</label><div id="respPengirimanSubmit" class="cekung px-3 py-2 font-black text-slate-500 break-words flex items-center min-h-[36px]">--</div></div>
                                     </div>
                                     <div>
                                         <label class="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase mb-1.5"><i class="fa-solid fa-box-open text-brand-500"></i> Preview Artikel</label>
@@ -217,7 +223,9 @@
                                 </div>
                             </div>
                             <div class="mt-5 space-y-4">
-                                <div class="cekung p-3.5 flex items-center justify-between"><span class="text-xs font-black text-slate-800 dark:text-slate-300 uppercase"><i class="fa-solid fa-money-bill-wave text-emerald-500"></i> Total Harga:</span><span id="respTotalHarga" class="text-emerald-600 dark:text-emerald-400 font-black text-base">Rp 0</span></div>
+                                <div class="cekung p-3.5 space-y-2 shadow-sm">
+                                    <div class="flex items-center justify-between pt-1"><span class="text-xs font-black text-slate-800 dark:text-slate-300 uppercase"><i class="fa-solid fa-money-bill-wave text-emerald-500"></i> Total Harga:</span><span id="respTotalHarga" class="text-emerald-600 dark:text-emerald-400 font-black text-base">Rp 0</span></div>
+                                </div>
                                 <button type="submit" id="btnSubmitForm" class="w-full btn-primary py-3 px-4 font-black rounded-lg text-sm flex items-center justify-center gap-2"><i class="fa-solid fa-paper-plane"></i> SUBMIT SEMUA ARTIKEL</button>
                             </div>
                         </div>
@@ -227,24 +235,28 @@
                 <!-- Form 2: Cek Stock & Promo -->
                 <div id="cekStockForm" class="p-4 sm:p-5 hidden">
                     <div class="grid grid-cols-1 xl:grid-cols-12 gap-4">
-                        <div class="xl:col-span-5 space-y-4">
-                            <div class="flex items-center gap-2 pb-2 border-b border-slate-400/30 dark:border-slate-700/50">
-                                <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black"><i class="fa-solid fa-barcode"></i></div>
-                                <h3 class="font-black text-xs text-slate-800 dark:text-slate-200">Cek Stock & Promo Checker</h3>
+                        <div class="xl:col-span-5 space-y-4 relative">
+                            <div class="flex items-center justify-between pb-2 border-b border-slate-400/30 dark:border-slate-700/50">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black"><i class="fa-solid fa-barcode"></i></div>
+                                    <h3 class="font-black text-xs text-slate-800 dark:text-slate-200">Cek Stock & Promo Checker</h3>
+                                </div>
+                                <button onclick="openPesananCustModal()" class="px-3 py-1.5 btn-primary font-black rounded-lg text-[10px] flex items-center gap-1.5 shadow-md border border-brand-300/30 hover:scale-105 transition-transform"><i class="fa-solid fa-cart-flatbed"></i> Pesanan Cust</button>
                             </div>
                             
                             <div class="cembung p-4 text-center border border-slate-300/30 dark:border-slate-700/30 mt-4">
+                                <i class="fa-solid fa-magnifying-glass text-3xl text-brand-400 mb-3 opacity-80"></i>
+                                <h4 class="font-black text-sm text-slate-800 dark:text-slate-200 mb-1">Scan Barcode Artikel</h4>
+                                <p class="text-[10px] text-slate-500 font-bold mb-4">Sistem akan otomatis menampilkan seluruh varian warna dan ukuran (generic match).</p>
+                                
                                 <div class="relative max-w-sm mx-auto">
                                     <input type="text" id="inputCekStockSku" autocomplete="off" spellcheck="false" placeholder="Scan atau ketik SKU disini..." oninput="onCekStockSkuChange()" class="cekung w-full pl-4 pr-10 py-3 text-sm font-black uppercase text-center text-slate-800 dark:text-slate-200 border-2 border-brand-500/30 focus:border-brand-500 transition-colors shadow-inner rounded-xl">
-                                    <button onclick="document.getElementById('inputCekStockSku').value=''; onCekStockSkuChange();" class="absolute right-3 top-3.5 text-slate-400 hover:text-rose-500 transition-colors"><i class="fa-solid fa-circle-xmark"></i></button>
+                                    <button onclick="document.getElementById('inputCekStockSku').value=''; onCekStockSkuChange();" class="absolute right-3 top-3.5 text-slate-400 hover:text-rose-500 transition-colors"><i class="fa-solid fa-circle-xmark text-lg"></i></button>
                                 </div>
-                                <button type="button" onclick="openPesananCustModal()" class="w-full max-w-sm mx-auto h-10 mt-4 btn-cembung rounded-lg flex items-center justify-center gap-2 shadow-md transition-colors border border-purple-500/30 text-purple-700 dark:text-purple-400 hover:bg-purple-500 hover:text-white font-black text-xs">
-                                    <i class="fa-solid fa-file-invoice"></i> Buat Pesanan Customer
-                                </button>
                             </div>
                         </div>
 
-                        <div class="xl:col-span-7 space-y-4 cembung p-4 flex flex-col h-[500px] ml-0 xl:ml-4 border border-slate-300/30 dark:border-slate-700/30">
+                        <div class="xl:col-span-7 space-y-4 cembung p-4 flex flex-col h-[550px] ml-0 xl:ml-4 border border-slate-300/30 dark:border-slate-700/30">
                             <div class="flex items-center justify-between pb-2 border-b border-slate-400/30 dark:border-slate-700/50 shrink-0">
                                 <div class="flex items-center gap-2">
                                     <div class="w-5 h-5 rounded-full btn-primary text-white flex items-center justify-center text-[10px] font-black"><i class="fa-solid fa-list"></i></div>
@@ -252,9 +264,11 @@
                                 </div>
                                 <span id="cekStockCount" class="text-[10px] font-black bg-brand-500/20 text-brand-700 dark:text-brand-400 px-2 py-0.5 rounded shadow-sm">0 Ditemukan</span>
                             </div>
+
                             <div id="stockResultContainer" class="flex-1 overflow-y-auto custom-scrollbar p-1 space-y-3 mt-2">
                                 <div class="text-center text-slate-500 text-[11px] py-10 font-bold flex flex-col items-center justify-center h-full">
-                                    <i class="fa-solid fa-barcode text-4xl mb-3 opacity-30"></i>Silakan scan/ketik SKU untuk melihat detail stok.
+                                    <i class="fa-solid fa-barcode text-4xl mb-3 opacity-30"></i>
+                                    Silakan scan/ketik SKU untuk melihat detail stok & promo.
                                 </div>
                             </div>
                         </div>
@@ -265,111 +279,153 @@
 
         <!-- DATA INPUT TAB -->
         <section id="tab-daftar" class="tab-content hidden space-y-4 w-full relative z-10">
-            <div class="cembung p-4 space-y-3 w-full border border-slate-300/30 dark:border-slate-700/30">
+            <!-- TAB Navigasi Internal Data Input -->
+            <div class="cekung p-1.5 w-full sm:w-fit mx-auto flex items-center justify-center gap-1.5 mb-2 rounded-full border border-slate-300/30 dark:border-transparent">
+                <button onclick="switchDaftarTab('retur-ea')" id="btnDaftarTab-retur" class="w-full relative px-6 py-1.5 text-xs font-black rounded-full btn-primary text-white shadow-md flex items-center justify-center gap-2 whitespace-nowrap transition-all">
+                    <i class="fa-solid fa-box-archive"></i> Retur & EA
+                    <span id="badge-tab-retur" class="bg-rose-500 text-white text-[10px] px-2 py-0.5 rounded-full shadow-inner border border-rose-700">0</span>
+                </button>
+                <button onclick="switchDaftarTab('req-cust')" id="btnDaftarTab-req" class="w-full relative px-6 py-1.5 text-xs font-black rounded-full text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 bg-transparent whitespace-nowrap transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-users"></i> Req Cust
+                    <span id="badge-tab-req" class="bg-slate-400 text-white text-[10px] px-2 py-0.5 rounded-full shadow-inner border border-slate-500 dark:border-slate-700">0</span>
+                </button>
+            </div>
+
+            <div class="cembung p-4 space-y-3 w-full border border-slate-300/30 dark:border-slate-700/30 relative">
+                <!-- Kontainer Tombol Switch Ke Pesanan Cust (Khusus saat di Req Cust) -->
+                <div id="togglePesananContainer" class="hidden absolute -top-5 right-4 sm:-top-8">
+                    <button onclick="togglePesananCustView()" id="btnTogglePesanan" class="bg-purple-100 hover:bg-purple-200 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400 dark:border-purple-800 border border-purple-200 px-4 py-2 rounded-xl text-[10px] font-black shadow-lg flex items-center gap-2 transition-colors">
+                        <i class="fa-solid fa-truck-ramp-box"></i> 🛒 Buka Pesanan Cust <span id="badge-tab-pesanan" class="bg-purple-500 text-white px-1.5 py-0.5 rounded-full text-[9px] shadow-inner">0</span>
+                    </button>
+                </div>
+
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
                     <div class="relative w-full lg:w-1/2">
                         <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-500 text-sm"></i>
-                        <input type="text" id="searchRequests" oninput="renderRequestCards()" placeholder="Cari SKU, Nama Toko, Status..." class="cekung w-full pl-9 pr-3 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-200">
+                        <input type="text" id="searchRequests" oninput="renderRequestCards()" placeholder="Cari SKU, Nama Toko, Status..." autocomplete="off" spellcheck="false" class="cekung w-full pl-9 pr-3 py-2.5 text-xs font-bold text-slate-800 dark:text-slate-200">
                     </div>
                     <div class="relative group w-full lg:w-64">
-                        <select id="filterStatus" onchange="renderRequestCards()" class="modern-select cekung w-full px-3 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200"></select>
+                        <select id="filterStatus" onchange="renderRequestCards()" autocomplete="off" class="modern-select cekung w-full px-3 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200"><option value="ALL">🔍 Semua Status</option></select>
+                    </div>
+                </div>
+                <div class="pt-3 border-t border-slate-400/20 dark:border-slate-700/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div class="relative w-full sm:w-64">
+                        <i class="fa-solid fa-calendar-days absolute left-3 top-3 text-brand-600 dark:text-brand-400 text-sm"></i>
+                        <input type="text" id="dateRangeFilter" autocomplete="off" placeholder="Rentang Tanggal..." class="cekung w-full pl-9 pr-3 py-2.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200">
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto ml-auto">
+                        <button onclick="resetDateFilter()" class="px-4 py-2.5 btn-cembung font-black rounded-lg text-xs transition-colors flex-1 sm:flex-none"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                        <button onclick="toggleViewAll()" id="btnViewAll" class="px-4 py-2.5 btn-cembung font-black rounded-lg text-xs transition-colors flex-1 sm:flex-none"><i class="fa-solid fa-list-ul"></i> View All</button>
                     </div>
                 </div>
             </div>
+
             <div class="flex items-center justify-between text-xs font-black text-slate-500 dark:text-slate-400 px-2"><span id="requestsCountLabel">0 Permintaan Belum Diproses</span></div>
+            <div id="unifiedWarningBanner" class="hidden w-full mb-1 mt-2"></div>
             <div id="requestsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 w-full"></div>
         </section>
 
         <!-- DASHBOARD TAB -->
         <section id="tab-dashboard" class="tab-content hidden space-y-5 w-full relative z-10">
+            <!-- (Bagian Dashboard Sama Persis, Kode disederhanakan demi space) -->
             <div class="cembung p-5 relative overflow-hidden flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-slate-300/30 dark:border-slate-700/30">
                 <div>
                     <h2 class="text-base sm:text-lg font-black flex items-center gap-2 text-slate-800 dark:text-brand-200"><i class="fa-solid fa-chart-line text-emerald-600 dark:text-emerald-400"></i> DASHBOARD</h2>
-                    <p class="text-[11px] text-slate-500 dark:text-[#8ea8a2] font-bold mt-0.5">Ringkasan statistik & performa operasional</p>
+                    <p class="text-[11px] text-slate-500 font-bold mt-0.5">Ringkasan statistik & performa operasional</p>
                 </div>
                 <button onclick="openMasterModal()" class="admin-only px-4 py-2 btn-cembung text-xs font-black rounded-lg flex items-center justify-center gap-2 shadow-md hover:scale-105 transition-transform"><i class="fa-solid fa-database text-emerald-300"></i> Update Master Data</button>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full mt-4">
-                <div class="cembung p-4 border-l-4 border-l-slate-400"><p class="text-[11px] font-black text-slate-600 dark:text-slate-400 uppercase">Total Permintaan</p><h3 id="dash-total-nominal" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1">Rp 0</h3></div>
-                <div class="cembung p-4 border-l-4 border-l-rose-500"><p class="text-[11px] font-black text-rose-600 dark:text-rose-500 uppercase">Total Retur</p><h3 id="dash-retur-total" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1">Rp 0</h3></div>
-                <div class="cembung p-4 border-l-4 border-l-blue-500"><p class="text-[11px] font-black text-blue-600 dark:text-blue-500 uppercase">Total Endless Aisle</p><h3 id="dash-ea-total" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1">Rp 0</h3></div>
-                <div class="cembung p-4 border-b-4 border-b-amber-500"><p class="text-[11px] font-black text-amber-600 dark:text-amber-500 uppercase">Menunggu Proses</p><h3 id="dash-waiting-count" class="text-xl sm:text-2xl font-black text-amber-600 dark:text-amber-500 mt-1">0</h3></div>
-            </div>
-
-            <!-- TABEL TOP SKU REQ CUST & PESANAN CUST -->
-            <div class="cembung p-4 mt-4">
-                <h3 class="font-black text-xs text-slate-800 dark:text-slate-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-star text-purple-500"></i> Top SKU Req Cust & Pesanan Cust</h3>
-                <div class="overflow-x-auto custom-scrollbar w-full pb-2">
-                    <table class="w-full text-left text-[11px] min-w-[650px]">
-                        <thead class="text-slate-500 dark:text-slate-500 uppercase font-black border-b border-slate-400/20 dark:border-slate-700/30">
-                            <tr><th class="p-2.5">Rank</th><th class="p-2.5">SKU Code</th><th class="p-2.5 min-w-[200px]">Description</th><th class="p-2.5">MC Lvl 4</th><th class="p-2.5 text-right">Total Qty</th><th class="p-2.5 text-right">Total Harga</th><th class="p-2.5 text-center">Frek</th></tr>
-                        </thead>
-                        <tbody id="dash-top-sku-req-body" class="divide-y divide-slate-400/10 dark:divide-slate-700/20"></tbody>
-                    </table>
+            <div class="cembung p-3 flex flex-col sm:flex-row items-center gap-3 justify-between w-full mt-2 mb-2 border border-slate-300/30 dark:border-slate-700/30">
+                <div class="flex items-center gap-2 text-xs font-black text-slate-700 dark:text-slate-400 uppercase"><i class="fa-solid fa-calendar-check text-brand-600 dark:text-brand-500 text-base"></i> Periode Data:</div>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <select id="dashFilterMonth" onchange="updateDashboard()" autocomplete="off" class="modern-select cekung flex-1 sm:w-36 px-3 py-1.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200">
+                        <option value="ALL">Semua Bulan</option><option value="0">Januari</option><option value="1">Februari</option><option value="2">Maret</option><option value="3">April</option><option value="4">Mei</option><option value="5">Juni</option><option value="6">Juli</option><option value="7">Agustus</option><option value="8">September</option><option value="9">Oktober</option><option value="10">November</option><option value="11">Desember</option>
+                    </select>
+                    <select id="dashFilterYear" onchange="updateDashboard()" autocomplete="off" class="modern-select cekung flex-1 sm:w-28 px-3 py-1.5 text-xs font-black cursor-pointer text-slate-800 dark:text-slate-200"></select>
+                    <button onclick="resetDashboardFilter()" class="px-3 py-1.5 btn-cembung font-black rounded-lg text-xs transition-colors flex items-center justify-center" title="Kembali ke Bulan Ini"><i class="fa-solid fa-rotate-right"></i></button>
                 </div>
             </div>
-            
-            <div class="cembung p-4 mt-4">
-                <h3 class="font-black text-xs text-slate-800 dark:text-slate-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Top SKU Retur & EA</h3>
-                <div class="overflow-x-auto custom-scrollbar w-full pb-2">
-                    <table class="w-full text-left text-[11px] min-w-[650px]">
-                        <thead class="text-slate-500 dark:text-slate-500 uppercase font-black border-b border-slate-400/20 dark:border-slate-700/30">
-                            <tr><th class="p-2.5">Rank</th><th class="p-2.5">SKU Code</th><th class="p-2.5 min-w-[200px]">Description</th><th class="p-2.5">MC Lvl 4</th><th class="p-2.5 text-right">Total Qty</th><th class="p-2.5 text-right">Total Harga</th><th class="p-2.5 text-center">Frek</th></tr>
-                        </thead>
-                        <tbody id="dash-top-sku-body" class="divide-y divide-slate-400/10 dark:divide-slate-700/20"></tbody>
-                    </table>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+                <div class="cembung p-4 flex flex-col justify-center border-l-4 border-l-slate-400 dark:border-l-slate-500">
+                    <p class="text-[11px] font-black text-slate-600 dark:text-slate-400 uppercase flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-slate-500"></i> Total Permintaan</p>
+                    <h3 id="dash-total-nominal" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1.5 break-words">Rp 0</h3>
+                    <p id="dash-total-count" class="text-[11px] font-black text-slate-500 mt-1">0 Req</p>
+                </div>
+                <div class="cembung p-4 flex flex-col justify-center border-l-4 border-l-rose-500">
+                    <p class="text-[11px] font-black text-rose-600 dark:text-rose-500 uppercase flex items-center gap-1.5"><i class="fa-solid fa-box-archive"></i> Total Retur</p>
+                    <h3 id="dash-retur-total" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1.5 break-words">Rp 0</h3>
+                    <p id="dash-retur-count" class="text-[11px] font-black text-slate-500 mt-1">0 Req</p>
+                </div>
+                <div class="cembung p-4 flex flex-col justify-center border-l-4 border-l-blue-500">
+                    <p class="text-[11px] font-black text-blue-600 dark:text-blue-500 uppercase flex items-center gap-1.5"><i class="fa-solid fa-cart-shopping"></i> Total Endless Aisle</p>
+                    <h3 id="dash-ea-total" class="text-sm font-black text-slate-800 dark:text-slate-200 mt-1.5 break-words">Rp 0</h3>
+                    <p id="dash-ea-count" class="text-[11px] font-black text-slate-500 mt-1">0 Req</p>
+                </div>
+                <div class="cembung p-4 border-b-4 border-b-amber-500 flex flex-col justify-center">
+                    <p class="text-[11px] font-black text-slate-600 dark:text-slate-400 uppercase flex items-center gap-1.5"><i class="fa-solid fa-hourglass-half text-amber-500"></i> Menunggu Proses</p>
+                    <h3 id="dash-waiting-count" class="text-xl sm:text-2xl font-black text-amber-600 dark:text-amber-500 mt-1.5">0</h3>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- MODAL PESANAN CUST -->
-    <div id="pesananCustModal" class="fixed inset-0 z-[90] bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-5">
-        <div class="cembung max-w-4xl w-full overflow-hidden transform transition-all max-h-[95vh] flex flex-col scale-95 opacity-0" id="pesananCustModalContent">
-            <div class="p-4 flex items-center justify-between border-b border-slate-300 dark:border-slate-700 shrink-0">
-                <h3 class="font-black text-sm text-purple-700 dark:text-purple-400 flex items-center gap-2"><i class="fa-solid fa-file-invoice"></i> Form Pesanan Customer</h3>
-                <button onclick="closePesananCustModal()" class="text-slate-500 hover:text-slate-800 dark:hover:text-white rounded-lg p-1 shrink-0"><i class="fa-solid fa-xmark text-lg"></i></button>
+    <!-- MODAL PESANAN CUST BARU -->
+    <div id="pesananCustModal" class="fixed inset-0 z-[90] bg-slate-900/90 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4">
+        <div class="cembung max-w-lg w-full overflow-hidden flex flex-col relative scale-95 opacity-0 transition-all duration-200" id="pesananCustModalContent">
+            <div class="p-4 border-b border-slate-400/20 dark:border-slate-700/30 flex items-center justify-between bg-header-tide-pine text-white shrink-0">
+                <h3 class="font-black text-sm flex items-center gap-2"><i class="fa-solid fa-cart-flatbed"></i> Input Pesanan Cust</h3>
+                <button onclick="closePesananCustModal()" class="text-slate-300 hover:text-white rounded-lg p-1 transition-colors"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
-            
-            <div class="flex-1 overflow-y-auto custom-scrollbar p-4 flex flex-col lg:flex-row gap-5">
-                <form id="formPesananCust" class="flex-1 space-y-3" onsubmit="submitPesananCust(event)">
-                    <div class="grid grid-cols-2 gap-3">
-                        <div><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">Nama Customer <span class="text-rose-500">*</span></label><input type="text" id="inputPesananNama" required oninput="onPesananSkuChange()" class="cekung w-full px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200"></div>
-                        <div><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">No WA / HP <span class="text-rose-500">*</span></label><input type="text" id="inputPesananWA" required oninput="onPesananSkuChange()" class="cekung w-full px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200"></div>
-                        <div><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">Toko Tujuan <span class="text-rose-500">*</span></label><input type="text" id="inputPesananTujuan" required placeholder="Cth: Eiger Pajajaran" oninput="onPesananSkuChange()" class="cekung w-full px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200 uppercase"></div>
-                        <div><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">PIC (Kasir/Staff) <span class="text-rose-500">*</span></label><input type="text" id="inputPesananPIC" required oninput="onPesananSkuChange()" class="cekung w-full px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200 uppercase"></div>
-                    </div>
-                    
-                    <div class="pt-2 border-t border-slate-300 dark:border-slate-700">
-                        <div class="flex items-center justify-between mb-2">
-                            <label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase">Daftar Artikel <span class="text-rose-500">*</span></label>
-                            <button type="button" onclick="addPesananSkuRow()" class="text-[9px] font-black bg-brand-500/10 text-brand-600 dark:text-brand-400 px-2 py-1 rounded border border-brand-500/20 transition-colors flex items-center gap-1 shadow-sm"><i class="fa-solid fa-plus"></i> Tambah Artikel</button>
-                        </div>
-                        <div id="pesananSkuContainer" class="space-y-2"></div>
-                    </div>
-                </form>
+            <div class="p-4 sm:p-5 overflow-y-auto custom-scrollbar space-y-4 max-h-[75vh]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Detail Pelanggan -->
+                    <div class="sm:col-span-2"><h4 class="font-black text-[10px] text-slate-500 dark:text-slate-400 uppercase border-b border-slate-400/20 pb-1 mb-2">Detail Customer</h4></div>
+                    <div><label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">Nama Cust <span class="text-rose-500">*</span></label><input type="text" id="pc-nama" placeholder="Bpk Budi" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200"></div>
+                    <div><label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">No WA / HP <span class="text-rose-500">*</span></label><input type="text" id="pc-wa" placeholder="0812xxxxxx" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200"></div>
 
-                <div class="lg:w-72 shrink-0 flex flex-col cembung p-3 h-fit border-purple-500/30 border">
-                    <h4 class="font-black text-xs text-brand-700 dark:text-brand-400 mb-2 border-b border-slate-300 dark:border-slate-700 pb-2"><i class="fa-solid fa-clipboard-list"></i> Ringkasan Pesanan</h4>
-                    
-                    <div class="space-y-1.5 text-[10px] mb-3">
-                        <div class="flex justify-between"><span class="text-slate-500 font-bold">Nama Cust:</span><span id="respPesananNama" class="font-black text-slate-800 dark:text-slate-200">--</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 font-bold">No WA:</span><span id="respPesananWA" class="font-black text-slate-800 dark:text-slate-200">--</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 font-bold">Tujuan:</span><span id="respPesananTujuan" class="font-black text-slate-800 dark:text-slate-200">--</span></div>
-                        <div class="flex justify-between"><span class="text-slate-500 font-bold">PIC:</span><span id="respPesananPIC" class="font-black text-slate-800 dark:text-slate-200">--</span></div>
+                    <!-- Detail Pesanan -->
+                    <div class="sm:col-span-2 mt-2"><h4 class="font-black text-[10px] text-slate-500 dark:text-slate-400 uppercase border-b border-slate-400/20 pb-1 mb-2">Detail Barang & Tujuan</h4></div>
+                    <div>
+                        <label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">SKU Code <span class="text-rose-500">*</span></label>
+                        <input type="text" id="pc-sku" oninput="onPesananSkuChange()" placeholder="Scan/Input SKU" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200">
+                        <div id="pc-desc" class="text-[9px] mt-1 text-slate-500 font-bold min-h-[14px]"></div>
                     </div>
+                    <div><label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">Qty <span class="text-rose-500">*</span></label><input type="number" id="pc-qty" value="1" min="1" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200"></div>
                     
-                    <div class="text-[10px] font-bold text-slate-500 mb-1">Artikel Pesanan:</div>
-                    <div id="respPesananSkuList" class="flex-1 overflow-y-auto custom-scrollbar space-y-1.5 min-h-[100px] max-h-[200px] p-1 border-y border-slate-300 dark:border-slate-700 py-2"></div>
-                    
-                    <div class="mt-3 pt-2 flex items-center justify-between">
-                        <span class="text-[10px] font-bold text-slate-500">Total Harga:</span>
-                        <span id="respPesananTotalHarga" class="font-black text-emerald-600 dark:text-emerald-400 text-sm">Rp 0</span>
+                    <div>
+                        <label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">Kode Store Tujuan <span class="text-rose-500">*</span></label>
+                        <input type="text" id="pc-store" oninput="onPesananStoreChange()" placeholder="Contoh: 1530" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200">
+                        <div id="pc-site-name" class="text-[9px] mt-1 text-slate-500 font-bold min-h-[14px]"></div>
                     </div>
-                    
-                    <button type="submit" form="formPesananCust" class="mt-3 w-full bg-purple-600 hover:bg-purple-700 text-white py-2.5 rounded-lg text-xs font-black shadow-md flex items-center justify-center gap-1.5 transition-colors"><i class="fa-solid fa-paper-plane"></i> KIRIM PESANAN</button>
+                    <div><label class="block text-[11px] font-black text-slate-700 dark:text-slate-300 mb-1">Nama PIC <span class="text-rose-500">*</span></label><input type="text" id="pc-pic" placeholder="Nama Karyawan" autocomplete="off" class="cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200"></div>
                 </div>
+            </div>
+            <div class="p-4 border-t border-slate-400/20 dark:border-slate-700/30 flex justify-end gap-3 shrink-0">
+                <button onclick="closePesananCustModal()" class="px-4 py-2.5 btn-cembung rounded-lg text-xs font-black">Batal</button>
+                <button onclick="submitPesananCust()" class="px-5 py-2.5 btn-primary rounded-lg text-xs font-black flex items-center gap-2"><i class="fa-solid fa-paper-plane"></i> Submit Pesanan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK SUBMIT REQ CUST -->
+    <div id="quickReqModal" class="fixed inset-0 z-[95] bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="cembung max-w-sm w-full overflow-hidden flex flex-col scale-95 opacity-0 transition-all duration-150" id="quickReqModalContent">
+            <div class="p-4 border-b border-slate-400/20 dark:border-slate-700/30 bg-blue-500/10 flex justify-between items-center">
+                <h3 class="font-black text-sm text-blue-700 dark:text-blue-400 flex items-center gap-2"><i class="fa-solid fa-users"></i> Tambah ke Req Cust</h3>
+                <button onclick="closeQuickReqModal()" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <div class="p-5 space-y-4">
+                <div class="cekung p-3 rounded-lg border border-slate-300/30 dark:border-slate-700/30">
+                    <div class="font-mono font-black text-brand-700 dark:text-brand-400 text-xs mb-1" id="qr-sku">--</div>
+                    <div class="font-bold text-slate-800 dark:text-slate-200 text-xs leading-tight" id="qr-desc">--</div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-black text-slate-700 dark:text-slate-400 uppercase mb-1">Qty <span class="text-rose-500">*</span></label>
+                    <input type="number" id="qr-qty" required min="1" value="1" autocomplete="off" class="cekung w-full px-3 py-2 text-sm font-black text-slate-800 dark:text-slate-200">
+                </div>
+                <button onclick="submitQuickReq()" class="w-full btn-primary py-3 px-4 font-black rounded-lg text-sm flex items-center justify-center gap-2 shadow-md"><i class="fa-solid fa-paper-plane"></i> SUBMIT REQ CUST</button>
             </div>
         </div>
     </div>
@@ -391,7 +447,6 @@
                     <div class="flex justify-between items-center pt-3 border-t border-slate-400/20 dark:border-slate-700/50 mt-3 text-xs">
                         <span class="font-bold text-slate-600 dark:text-slate-400">Total Artikel: <span id="mTotalArtikel" class="text-slate-800 dark:text-slate-200 font-black text-sm">0</span></span>
                         <span class="font-bold text-slate-600 dark:text-slate-400">Total Qty: <span id="mQty" class="text-slate-800 dark:text-slate-200 font-black text-sm">0</span></span>
-                        <span id="mTotalHargaBox" class="font-bold text-emerald-700 dark:text-emerald-500">Total: <span id="mTotalHarga" class="font-black text-sm break-words">Rp 0</span></span>
                     </div>
                 </div>
                 
@@ -399,12 +454,12 @@
                     <div class="pb-4 border-b border-slate-400/20 dark:border-slate-700/30" id="modalStatusArea">
                         <label class="block font-black text-slate-700 dark:text-slate-400 uppercase text-[11px] mb-2"><i class="fa-solid fa-arrows-rotate text-brand-600 dark:text-brand-500"></i> Pembaruan Status</label>
                         <div class="flex gap-2.5 flex-col sm:flex-row">
-                            <select id="modalStatusSelect" onchange="onModalStatusChange()" class="modern-select cekung flex-1 px-3 py-2.5 font-black text-xs cursor-pointer text-slate-800 dark:text-slate-200"></select>
+                            <select id="modalStatusSelect" onchange="onModalStatusChange()" autocomplete="off" class="modern-select cekung flex-1 px-3 py-2.5 font-black text-xs cursor-pointer text-slate-800 dark:text-slate-200"></select>
                             <button id="btnSimpanStatus" onclick="updateRequestStatus()" class="btn-primary py-2.5 px-4 font-black rounded-lg transition-all shrink-0 w-full sm:w-auto"><i class="fa-solid fa-floppy-disk"></i> SIMPAN</button>
                         </div>
                     </div>
-                    <div id="modalStoContainer" class="hidden"><label class="block font-black text-brand-700 dark:text-brand-400 text-[11px] uppercase mb-1"><i class="fa-solid fa-barcode"></i> Nomor STO <span class="text-rose-500 font-black">* (Wajib)</span></label><input type="text" id="modalInputNoSto" placeholder="Masukkan Nomor STO" class="cekung w-full px-3 py-2.5 font-mono text-xs font-black text-slate-800 dark:text-slate-200 mb-2"></div>
-                    <div id="standardKeteranganContainer"><label id="modalKetLabel" class="block font-black text-brand-700 dark:text-brand-400 text-[11px] uppercase mb-1"><i class="fa-solid fa-comment-dots"></i> Update Keterangan <span class="text-slate-500 font-normal">(Opsional)</span></label><textarea id="modalInputKeterangan" rows="3" placeholder="Catatan proses..." class="cekung w-full px-3 py-2.5 text-xs font-bold resize-none text-slate-800 dark:text-slate-200 mb-2"></textarea></div>
+                    <div id="modalStoContainer" class="hidden"><label class="block font-black text-brand-700 dark:text-brand-400 text-[11px] uppercase mb-1"><i class="fa-solid fa-barcode"></i> Nomor STO <span class="text-rose-500 font-black">* (Wajib)</span></label><input type="text" id="modalInputNoSto" placeholder="Masukkan Nomor STO" autocomplete="off" class="cekung w-full px-3 py-2.5 font-mono text-xs font-black text-slate-800 dark:text-slate-200 mb-2"></div>
+                    <div id="standardKeteranganContainer"><label id="modalKetLabel" class="block font-black text-brand-700 dark:text-brand-400 text-[11px] uppercase mb-1"><i class="fa-solid fa-comment-dots"></i> Update Keterangan <span class="text-slate-500 font-normal">(Opsional)</span></label><textarea id="modalInputKeterangan" rows="3" placeholder="Catatan proses..." autocomplete="off" spellcheck="false" class="cekung w-full px-3 py-2.5 text-xs font-bold resize-none text-slate-800 dark:text-slate-200 mb-2"></textarea></div>
                 </div>
             </div>
         </div>
@@ -414,25 +469,22 @@
     <div id="masterDataModal" class="fixed inset-0 z-[80] bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-3">
         <div class="cembung max-w-4xl w-full overflow-hidden transform transition-all max-h-[95vh] flex flex-col scale-95 opacity-0" id="masterDataModalContent">
             <div class="p-4 flex items-center justify-between shrink-0 border-b border-slate-400/20 dark:border-slate-700/30">
-                <h3 class="font-black text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2"><i class="fa-solid fa-database text-brand-600 dark:text-brand-500"></i> Update Master Data Server</h3>
+                <h3 class="font-black text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2"><i class="fa-solid fa-database text-brand-600 dark:text-brand-500"></i> Update Master Data (Auto-Chunk)</h3>
                 <button onclick="closeMasterModal()" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 rounded-lg p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div class="p-4 overflow-y-auto custom-scrollbar flex-1 space-y-4 text-xs relative">
+                <div id="persistentLoadingToast" class="hidden absolute inset-0 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex flex-col items-center justify-center transition-opacity opacity-0"><div class="w-12 h-12 border-4 border-brand-200 border-t-brand-600 rounded-full animate-spin mb-3 shadow-md"></div><p class="font-black text-brand-900 dark:text-brand-300 bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-lg border border-brand-100 dark:border-slate-700"><i class="fa-solid fa-cloud-arrow-up mr-2"></i> ⏳ Memproses Data Raksasa...</p></div>
+                
                 <div>
                     <div class="cekung p-1.5 rounded-xl flex flex-wrap items-center justify-between gap-1.5 w-full">
                         <button id="btnMasterSite" onclick="setMasterTab('site')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg btn-primary text-white transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-store"></i> Master Site</button>
-                        <button id="btnMasterArtikel" onclick="setMasterTab('artikel')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 dark:text-slate-400 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-box-open"></i> Master Artikel</button>
-                        <button id="btnMasterBin" onclick="setMasterTab('bin')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 dark:text-slate-400 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-boxes-stacked"></i> Inventory Bin</button>
-                        <button id="btnMasterPromo" onclick="setMasterTab('promo')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 dark:text-slate-400 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-tags text-rose-500"></i> Promo Aktif</button>
-                        <button id="btnMasterNewArrival" onclick="setMasterTab('newarrival')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 dark:text-slate-400 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-star text-amber-500"></i> New Arrival</button>
+                        <button id="btnMasterArtikel" onclick="setMasterTab('artikel')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 hover:text-slate-800 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-box-open"></i> Master Artikel</button>
+                        <button id="btnMasterBin" onclick="setMasterTab('bin')" class="flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 hover:text-slate-800 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5"><i class="fa-solid fa-boxes-stacked"></i> Inventory Bin</button>
                     </div>
                 </div>
-                
-                <div id="promoProgramSelector" class="hidden">
-                    <label class="block font-black text-slate-700 dark:text-slate-300 uppercase mb-1">Pilih / Ketik Program Promo Baru <span class="text-rose-500">*</span></label>
-                    <input type="text" id="inputPromoProgram" list="promoProgramList" class="cekung w-full px-3 py-2 text-xs font-bold text-slate-800 dark:text-slate-200" placeholder="Contoh: PROMO 12.12">
-                    <datalist id="promoProgramList"></datalist>
-                    <p class="text-[10px] text-brand-600 dark:text-brand-400 font-bold mt-1">Data promo akan ditambahkan ke program yang Anda ketik/pilih di atas.</p>
+
+                <div class="bg-blue-500/10 border border-blue-500/20 p-3 rounded-xl mb-3">
+                    <p class="text-[10px] text-blue-700 dark:text-blue-400 font-bold"><i class="fa-solid fa-circle-info"></i> Data akan otomatis dipecah agar <b>Jutaan Baris Excel</b> tetap bisa tersimpan permanen di Google Sheet (Tanpa limit 50rb karakter!).</p>
                 </div>
 
                 <div>
@@ -442,46 +494,31 @@
             </div>
             <div class="p-4 flex justify-between shrink-0 border-t border-slate-400/20 dark:border-slate-700/30">
                 <button onclick="closeMasterModal()" class="px-5 py-2.5 btn-cembung font-black text-xs transition-colors rounded-lg">Batal</button>
-                <button id="btnSubmitMaster" onclick="processMasterDataUpdate()" class="px-5 py-2.5 btn-primary font-black rounded-lg text-xs transition-all flex items-center gap-2"><i class="fa-solid fa-cloud-arrow-up"></i> Simpan Ke Server</button>
+                <button id="btnSubmitMaster" onclick="processMasterDataUpdate()" class="px-5 py-2.5 btn-primary font-black rounded-lg text-xs transition-all flex items-center gap-2"><i class="fa-solid fa-cloud-arrow-up"></i> Simpan Permanen</button>
             </div>
         </div>
     </div>
 
     <script>
-        window.onerror = function(msg) { console.warn("Error dicegah:", msg); return true; };
-        
-        let isViewAll = false; let isAdminMode = false; let robotClickCount = 0; let robotClickTimer = null; 
-        let activeMasterTab = 'site'; let fpInstance = null;
-        let masterSite = [], masterArtikel = [], inventoryBin = [], masterPromo = [], masterNewArrival = []; 
-        let requestsList = []; let deletedReqIds = []; let activeDetailReqIds = [];
+        window.onerror = function(msg) { console.warn("Sandbox Error Dicegah:", msg); return true; };
+        window.onunhandledrejection = function(event) { event.preventDefault(); };
 
+        // =========================================================================
+        // URL APPS SCRIPT ANDA
+        const DEFAULT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzaMuRM2ZfCFW-FREi5PVP-NrWWhdYjkSB-h7G27oO3zDcdLc3RhXFoElMSPe3r7z5AeA/exec";
+        // =========================================================================
+
+        let isViewAll = false; let activeDataInputTab = 'retur-ea'; let isViewPesananCust = false;
+        let isAdminMode = false; let robotClickCount = 0; let robotClickTimer = null; let activeMasterTab = 'site';
+        let chartStatusInstance = null; let chartPengirimanInstance = null; let fpInstance = null;
+        
+        let rawMasterSite = "", rawMasterArtikel = "", rawMasterBin = "", rawMasterPromo = "", rawMasterNewArrival = ""; 
+        let requestsList = []; let pendingUpdates = {}, activeDetailReqIds = [];
+        let deletedReqIds = []; let isSyncing = false; 
+
+        // Map untuk Cek Stock Cepat
         let siteMapData = new Map(), artikelMapData = new Map(), binMapData = new Map(), promoMapData = new Map();
         let newArrivalSet = new Set();
-        
-        const DEFAULT_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzaMuRM2ZfCFW-FREi5PVP-NrWWhdYjkSB-h7G27oO3zDcdLc3RhXFoElMSPe3r7z5AeA/exec";
-
-        function buildHashMaps() {
-            siteMapData.clear(); masterSite.forEach(s => siteMapData.set(String(s.kode || '').trim().toUpperCase(), s));
-            artikelMapData.clear(); masterArtikel.forEach(a => artikelMapData.set(String(a.sku || '').trim().toUpperCase(), a));
-            
-            binMapData.clear();
-            inventoryBin.forEach(b => {
-                const sku = String(b.sku || '').trim().toUpperCase();
-                const binVal = String(b.bin || '').trim();
-                if (!binMapData.has(sku)) binMapData.set(sku, []);
-                if (binVal) binMapData.get(sku).push(binVal);
-            });
-            
-            promoMapData.clear();
-            masterPromo.forEach(p => {
-                const sku = String(p.sku || '').trim().toUpperCase();
-                if(!promoMapData.has(sku)) promoMapData.set(sku, []);
-                promoMapData.get(sku).push(p);
-            });
-            
-            newArrivalSet.clear();
-            masterNewArrival.forEach(n => newArrivalSet.add(String(n.sku || '').trim().toUpperCase()));
-        }
 
         const StorageManager = {
             getItem: (key) => { try { return window.localStorage ? window.localStorage.getItem(key) : null; } catch(e) { return null; } },
@@ -489,18 +526,54 @@
         };
 
         const originalFetch = window.fetch;
-        window.fetch = async function(...args) { try { return await originalFetch(...args); } catch(e) { return { text: async () => "" }; } };
+        window.fetch = async function(...args) {
+            try { return await originalFetch(...args); } catch(e) { return { text: async () => "" }; }
+        };
+
+        // PARSER RAW DATA (CEPAT & AMAN DARI LIMIT GOOGLE)
+        function buildHashMaps() {
+            siteMapData.clear();
+            if(rawMasterSite) {
+                rawMasterSite.split(/\r?\n/).forEach(line => {
+                    if(!line.trim()) return; let cols = line.split('\t');
+                    if(cols[0]) siteMapData.set(cols[0].trim().toUpperCase(), {kode: cols[0].trim(), name: cols[1]||'', branch: cols[2]||'-'});
+                });
+            }
+
+            artikelMapData.clear();
+            if(rawMasterArtikel) {
+                rawMasterArtikel.split(/\r?\n/).forEach(line => {
+                    if(!line.trim()) return; let cols = line.split('\t');
+                    if(cols[0]) artikelMapData.set(cols[0].trim().toUpperCase(), {sku: cols[0].trim(), desc: cols[1]||'-', mc: cols[2]||'-', price: cleanNumberStr(cols[3])});
+                });
+            }
+            
+            binMapData.clear();
+            if(rawMasterBin) {
+                rawMasterBin.split(/\r?\n/).forEach(line => {
+                    if(!line.trim()) return; let cols = line.split('\t');
+                    if(cols[0] && cols[1]) {
+                        let sku = cols[0].trim().toUpperCase();
+                        if(!binMapData.has(sku)) binMapData.set(sku, []);
+                        binMapData.get(sku).push(cols[1].trim());
+                    }
+                });
+            }
+        }
 
         function toggleTheme() {
-            const html = document.documentElement;
-            if (html.classList.contains('dark')) { html.classList.remove('dark'); StorageManager.setItem('theme', 'light'); updateThemeIcon('light'); } 
-            else { html.classList.add('dark'); StorageManager.setItem('theme', 'dark'); updateThemeIcon('dark'); }
+            try {
+                const html = document.documentElement;
+                if (html.classList.contains('dark')) { html.classList.remove('dark'); StorageManager.setItem('theme', 'light'); updateThemeIcon('light'); } 
+                else { html.classList.add('dark'); StorageManager.setItem('theme', 'dark'); updateThemeIcon('dark'); }
+                if (chartStatusInstance) setTimeout(() => updateDashboard(), 50); 
+            } catch (e) {}
         }
 
         function updateThemeIcon(theme) {
             const icon = document.getElementById('themeToggleIcon'); if (!icon) return;
-            if (theme === 'dark') icon.className = 'fa-solid fa-sun text-amber-500 text-base';
-            else icon.className = 'fa-solid fa-moon text-brand-700 text-base';
+            if (theme === 'dark') { icon.className = 'fa-solid fa-sun text-amber-500 text-base transition-transform duration-300 rotate-0'; } 
+            else { icon.className = 'fa-solid fa-moon text-brand-700 text-base transition-transform duration-300 -rotate-12'; }
         }
 
         function initTheme() {
@@ -509,355 +582,586 @@
             else { document.documentElement.classList.add('dark'); StorageManager.setItem('theme', 'dark'); updateThemeIcon('dark'); }
         }
 
-        function getStatusEmoji(status) { return '✅'; }
-        function getStatusIcon(status) { return '<i class="fa-solid fa-circle-check text-emerald-500"></i>'; }
-        function getTujuanIcon(tujuan) { return '<i class="fa-solid fa-bullseye text-slate-500"></i>'; }
-        function getPengirimanIcon(pengiriman) { return '<i class="fa-solid fa-paper-plane text-slate-500"></i>'; }
+        function getStatusEmoji(status) {
+            if(!status) return 'ℹ'; const s = String(status).toLowerCase();
+            if(s.includes('waiting') || s.includes('on proses')) return '⏳';
+            if(s.includes('ready') || s === 'selesai' || s.includes('done sto') || s.includes('done transaksi') || s.includes('done ambil')) return '✅';
+            if(s.includes('keep')) return '📦'; if(s.includes('damage')) return '💔'; if(s.includes('kosong') || s.includes('no stock')) return '📭';
+            if(s.includes('cancel')) return '🚫'; return '📌';
+        }
+        
+        function getStatusIcon(status) {
+            if(!status) return '<i class="fa-solid fa-circle-info text-slate-500"></i>'; const s = String(status).toLowerCase();
+            if(s.includes('waiting') || s.includes('on proses')) return '<i class="fa-solid fa-hourglass-half animate-pulse text-amber-500"></i>';
+            if(s.includes('ready') || s === 'selesai' || s.includes('done sto') || s.includes('done transaksi') || s.includes('done ambil')) return '<i class="fa-solid fa-circle-check text-emerald-500"></i>';
+            if(s.includes('keep')) return '<i class="fa-solid fa-box-archive text-blue-500"></i>';
+            if(s.includes('damage')) return '<i class="fa-solid fa-heart-crack text-orange-500"></i>';
+            if(s.includes('kosong') || s.includes('no stock')) return '<i class="fa-solid fa-box-open text-rose-500"></i>';
+            if(s.includes('cancel')) return '<i class="fa-solid fa-ban text-rose-500"></i>'; return '<i class="fa-solid fa-circle-info text-slate-500"></i>';
+        }
+
+        function getTujuanIcon(tujuan) {
+            if(!tujuan) return '<i class="fa-solid fa-bullseye text-slate-500"></i>'; const t = String(tujuan).toLowerCase();
+            if(t.includes('retur')) return '<i class="fa-solid fa-box-archive text-rose-500"></i>';
+            if(t.includes('endless')) return '<i class="fa-solid fa-cart-shopping text-blue-500"></i>';
+            if(t.includes('pesanan') || t.includes('req cust')) return '<i class="fa-solid fa-users text-purple-500"></i>';
+            return '<i class="fa-solid fa-bullseye text-slate-500"></i>';
+        }
+        
+        function getPengirimanIcon(pengiriman) {
+            if(!pengiriman) return '<i class="fa-solid fa-paper-plane text-slate-500"></i>'; const p = String(pengiriman).toLowerCase();
+            if(p.includes('jne') || p.includes('j&t') || p.includes('spx')) return '<i class="fa-solid fa-truck-fast text-orange-500"></i>';
+            if(p.includes('gosend') || p.includes('grab')) return '<i class="fa-solid fa-motorcycle text-emerald-500"></i>';
+            if(p.includes('pickup')) return '<i class="fa-solid fa-store text-blue-500"></i>';
+            return '<i class="fa-solid fa-paper-plane text-slate-500"></i>';
+        }
 
         function formatIndoDate(dateStr) {
             if (!dateStr || dateStr === '-') return '-'; let d = new Date(dateStr);
+            if (isNaN(d.getTime()) && typeof dateStr === 'string' && dateStr.includes('-') && dateStr.includes(':')) {
+                const parts = dateStr.split(' '); if(parts.length >= 2) { const dmy = parts[0].split('-'); const hm = parts[1].split(':'); if (dmy.length === 3 && hm.length >= 2) { d = new Date(dmy[2], parseInt(dmy[1])-1, dmy[0], hm[0], hm[1], hm[2] || 0); } }
+            }
             if (isNaN(d.getTime())) return String(dateStr);
             const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'], months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'];
             return `${days[d.getDay()]}, ${String(d.getDate()).padStart(2, '0')} ${months[d.getMonth()]} ${d.getFullYear()} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
         }
         
-        function parseDateSafe(timeStr) { return new Date(timeStr); }
-        function safeJSONParse(text) { try { return JSON.parse(text); } catch(e) { return []; } }
-        function cleanNumberStr(str) { return str ? (parseFloat(String(str).replace(/[^0-9.]/g, '')) || 0) : 0; }
+        function parseDateSafe(timeStr) {
+            if (!timeStr || timeStr === '-') return new Date(NaN); let d = new Date(timeStr); if (!isNaN(d.getTime())) return d;
+            if (typeof timeStr === 'string' && timeStr.includes('-') && timeStr.includes(':')) {
+                const parts = timeStr.split(' ');
+                if (parts.length >= 2) { const dmy = parts[0].split('-'); const hm = parts[1].split(':'); if (dmy.length === 3 && hm.length >= 2) return new Date(dmy[2], parseInt(dmy[1]) - 1, dmy[0], hm[0], hm[1], hm[2] || 0); }
+            } return new Date(NaN);
+        }
+
+        function safeJSONParse(text) { if (!text || typeof text !== 'string') return []; try { return JSON.parse(text); } catch(e) { return []; } }
+        function cleanNumberStr(str) { return str ? (parseInt(String(str).replace(/[^0-9]/g, '')) || 0) : 0; }
 
         function loadDataFromCache() {
-            const cSite = StorageManager.getItem('cacheMasterSite'); if (cSite) masterSite = safeJSONParse(cSite);
-            const cArt = StorageManager.getItem('cacheMasterArtikel'); if (cArt) masterArtikel = safeJSONParse(cArt);
-            const cBin = StorageManager.getItem('cacheInventoryBin'); if (cBin) inventoryBin = safeJSONParse(cBin);
-            const cPromo = StorageManager.getItem('cacheMasterPromo'); if (cPromo) masterPromo = safeJSONParse(cPromo);
-            const cNew = StorageManager.getItem('cacheMasterNewArrival'); if (cNew) masterNewArrival = safeJSONParse(cNew);
+            rawMasterSite = StorageManager.getItem('rawMasterSite') || "";
+            rawMasterArtikel = StorageManager.getItem('rawMasterArtikel') || "";
+            rawMasterBin = StorageManager.getItem('rawMasterBin') || "";
             const cReq = StorageManager.getItem('cacheRequestsList'); if (cReq) requestsList = safeJSONParse(cReq);
+            const cPend = StorageManager.getItem('cachePendingUpdates'); if (cPend) pendingUpdates = safeJSONParse(cPend);
             const cDel = StorageManager.getItem('cacheDeletedIds'); if(cDel) deletedReqIds = safeJSONParse(cDel);
             buildHashMaps();
         }
 
         function saveDataToCache() {
-            StorageManager.setItem('cacheMasterSite', JSON.stringify(masterSite)); StorageManager.setItem('cacheMasterArtikel', JSON.stringify(masterArtikel));
-            StorageManager.setItem('cacheInventoryBin', JSON.stringify(inventoryBin)); StorageManager.setItem('cacheMasterPromo', JSON.stringify(masterPromo));
-            StorageManager.setItem('cacheMasterNewArrival', JSON.stringify(masterNewArrival)); StorageManager.setItem('cacheRequestsList', JSON.stringify(requestsList));
+            StorageManager.setItem('rawMasterSite', rawMasterSite);
+            StorageManager.setItem('rawMasterArtikel', rawMasterArtikel);
+            StorageManager.setItem('rawMasterBin', rawMasterBin);
+            StorageManager.setItem('cacheRequestsList', JSON.stringify(requestsList));
+            StorageManager.setItem('cachePendingUpdates', JSON.stringify(pendingUpdates));
             StorageManager.setItem('cacheDeletedIds', JSON.stringify(deletedReqIds));
         }
 
+        function initDashboardFilters() {
+            const now = new Date(), monthSelect = document.getElementById('dashFilterMonth'), yearSelect = document.getElementById('dashFilterYear');
+            if (yearSelect) {
+                let currentYear = now.getFullYear(), yearHtml = '<option value="ALL">Semua Tahun</option>';
+                for(let y = 2024; y <= currentYear + 1; y++) yearHtml += `<option value="${y}">${y}</option>`;
+                yearSelect.innerHTML = yearHtml; yearSelect.value = String(currentYear);
+            }
+            if (monthSelect) monthSelect.value = String(now.getMonth());
+        }
+
+        function resetDashboardFilter() { initDashboardFilters(); updateDashboard(); showToast('🔄 Filter Direset', false); }
+
         document.addEventListener('DOMContentLoaded', function() {
-            initTheme(); loadDataFromCache(); populateStatusFilterDropdown(); switchTab('input');
-            setTimeout(()=>fetchInitialData(), 500);
+            try {
+                initTheme();
+                const dateRangeEl = document.getElementById("dateRangeFilter");
+                if (dateRangeEl && typeof flatpickr !== 'undefined') { fpInstance = flatpickr(dateRangeEl, { mode: "range", dateFormat: "d-m-Y", onChange: function() { requestAnimationFrame(renderRequestCards); } }); }
+                loadDataFromCache(); initDashboardFilters(); refreshCoreUI();
+                
+                fetchInitialData(); 
+                setInterval(() => syncDataFromSheetsBackground(), 5000); 
+                switchTab('input');
+            } catch (err) {}
         });
+
+        function refreshCoreUI() { 
+            requestAnimationFrame(() => { 
+                populateStatusFilterDropdown(); 
+                setTimeout(() => renderRequestCards(), 10); 
+                updateDashboard(); 
+                updateMenuNotificationIndicator(); 
+                updateMasterPlaceholder(); 
+            }); 
+        }
 
         function handleRobotClick() {
             robotClickCount++; clearTimeout(robotClickTimer); robotClickTimer = setTimeout(() => { robotClickCount = 0; }, 800);
             if (robotClickCount === 3) {
                 isAdminMode = !isAdminMode; robotClickCount = 0;
-                const sbMode = document.getElementById('sidebarModeStatus');
-                if (isAdminMode) {
-                    document.body.classList.add('admin-mode');
-                    if(sbMode) { sbMode.innerHTML = `<i class="fa-solid fa-unlock"></i> Admin Aktif`; sbMode.className = "text-[10px] bg-rose-900 text-rose-200 px-2 py-0.5 rounded shadow-inner mt-1 inline-block font-black"; }
-                    showToast('🔓 Mode Admin Aktif', false);
-                } else {
-                    document.body.classList.remove('admin-mode');
-                    if(sbMode) { sbMode.innerHTML = `<i class="fa-solid fa-user"></i> Tamu Aktif`; sbMode.className = "text-[10px] bg-black/40 text-brand-200 px-2 py-0.5 rounded shadow-inner mt-1 inline-block font-bold"; }
-                    showToast('🔒 Mode Tamu Aktif', false);
-                }
+                requestAnimationFrame(() => {
+                    const sbMode = document.getElementById('sidebarModeStatus');
+                    if (isAdminMode) {
+                        document.body.classList.add('admin-mode');
+                        if(sbMode) { sbMode.innerHTML = `<i class="fa-solid fa-unlock text-[9px]"></i> Admin Aktif`; sbMode.className = "text-[10px] bg-rose-900 text-rose-200 px-2 py-0.5 rounded shadow-inner mt-1 inline-block font-black"; }
+                        showToast('🔓 Mode Admin Aktif', false);
+                    } else {
+                        document.body.classList.remove('admin-mode');
+                        if(sbMode) { sbMode.innerHTML = `<i class="fa-solid fa-user text-[9px]"></i> Tamu Aktif`; sbMode.className = "text-[10px] bg-black/40 text-brand-200 px-2 py-0.5 rounded shadow-inner mt-1 inline-block font-bold"; }
+                        showToast('🔒 Mode Tamu Aktif', false);
+                    }
+                    const processBox = document.getElementById('internalProcessBox'), detailModal = document.getElementById('detailModal');
+                    if (processBox && detailModal && !detailModal.classList.contains('hidden')) {
+                        if (isAdminMode) processBox.classList.remove('hidden'); else processBox.classList.add('hidden');
+                    }
+                    refreshCoreUI(); 
+                });
             }
         }
 
         function toggleSidebar() {
-            const drawer = document.getElementById('sidebarDrawer'), overlay = document.getElementById('sidebarOverlay');
-            if (!drawer || !overlay) return;
-            if (!drawer.classList.contains('-translate-x-full')) { drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => overlay.classList.add('hidden'), 150); } 
-            else { overlay.classList.remove('hidden'); requestAnimationFrame(() => overlay.classList.remove('opacity-0')); drawer.classList.remove('-translate-x-full'); }
+            requestAnimationFrame(() => {
+                const drawer = document.getElementById('sidebarDrawer'), overlay = document.getElementById('sidebarOverlay');
+                if (!drawer || !overlay) return;
+                if (!drawer.classList.contains('-translate-x-full')) {
+                    drawer.classList.add('-translate-x-full'); overlay.classList.add('opacity-0'); setTimeout(() => overlay.classList.add('hidden'), 150);
+                } else {
+                    overlay.classList.remove('hidden'); requestAnimationFrame(() => overlay.classList.remove('opacity-0')); drawer.classList.remove('-translate-x-full');
+                }
+            });
         }
 
         function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            const target = document.getElementById(`tab-${tabId}`); if (target) target.classList.remove('hidden');
-            document.querySelectorAll('.nav-btn').forEach(btn => { btn.className = 'nav-btn w-full px-3 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-between text-slate-300 hover:text-white hover:bg-slate-800 border-t border-transparent'; });
-            const activeNav = document.getElementById(`nav-${tabId}`);
-            if (activeNav) activeNav.className = 'nav-btn w-full px-3 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-between bg-brand-600 text-white shadow-md border-t border-white/20';
-            if (tabId === 'dashboard') updateDashboard();
-            if (tabId === 'daftar') renderRequestCards();
-            const drawer = document.getElementById('sidebarDrawer'); if (drawer && !drawer.classList.contains('-translate-x-full')) toggleSidebar();
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+                const target = document.getElementById(`tab-${tabId}`); if (target) target.classList.remove('hidden');
+                document.querySelectorAll('.nav-btn').forEach(btn => { btn.className = 'nav-btn w-full px-3 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-between text-slate-300 hover:text-white hover:bg-slate-800 border-t border-transparent'; });
+                const activeNav = document.getElementById(`nav-${tabId}`);
+                if (activeNav) activeNav.className = 'nav-btn w-full px-3 py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-between bg-brand-600 text-white shadow-md border-t border-white/20';
+                if (tabId === 'dashboard') updateDashboard();
+                if (tabId === 'daftar') { const searchInput = document.getElementById('searchRequests'); if (searchInput) searchInput.value = ''; renderRequestCards(); }
+                const drawer = document.getElementById('sidebarDrawer'); if (drawer && !drawer.classList.contains('-translate-x-full')) toggleSidebar();
+            });
+        }
+        
+        // SWITCH TAB UNTUK DATA INPUT (RETUR VS REQ CUST)
+        function switchDaftarTab(tabType) {
+            activeDaftarTab = tabType;
+            isViewPesananCust = false; 
+            
+            const btnRetur = document.getElementById('btnDaftarTab-retur');
+            const btnReq = document.getElementById('btnDaftarTab-req');
+            const togglePesananContainer = document.getElementById('togglePesananContainer');
+            const togglePesananBtn = document.getElementById('btnTogglePesanan');
+            
+            if(tabType === 'retur-ea') {
+                if(btnRetur) { btnRetur.classList.add('btn-primary', 'text-white', 'shadow-md'); btnRetur.classList.remove('bg-transparent', 'text-slate-500', 'dark:text-slate-400'); }
+                if(btnReq) { btnReq.classList.add('bg-transparent', 'text-slate-500', 'dark:text-slate-400'); btnReq.classList.remove('btn-primary', 'text-white', 'shadow-md'); }
+                if(togglePesananContainer) togglePesananContainer.classList.add('hidden');
+                
+                document.getElementById('badge-tab-retur').classList.remove('bg-slate-400');
+                document.getElementById('badge-tab-retur').classList.add('bg-rose-500');
+                document.getElementById('badge-tab-req').classList.remove('bg-rose-500');
+                document.getElementById('badge-tab-req').classList.add('bg-slate-400');
+            } else {
+                if(btnReq) { btnReq.classList.add('btn-primary', 'text-white', 'shadow-md'); btnReq.classList.remove('bg-transparent', 'text-slate-500', 'dark:text-slate-400'); }
+                if(btnRetur) { btnRetur.classList.add('bg-transparent', 'text-slate-500', 'dark:text-slate-400'); btnRetur.classList.remove('btn-primary', 'text-white', 'shadow-md'); }
+                if(togglePesananContainer) togglePesananContainer.classList.remove('hidden');
+                
+                document.getElementById('badge-tab-req').classList.remove('bg-slate-400');
+                document.getElementById('badge-tab-req').classList.add('bg-rose-500');
+                document.getElementById('badge-tab-retur').classList.remove('bg-rose-500');
+                document.getElementById('badge-tab-retur').classList.add('bg-slate-400');
+                
+                // Reset styling pesanan cust button
+                if(togglePesananBtn) {
+                    togglePesananBtn.innerHTML = `<i class="fa-solid fa-truck-ramp-box"></i> 🛒 Buka Pesanan Cust <span id="badge-tab-pesanan" class="bg-purple-500 text-white px-1.5 py-0.5 rounded-full text-[9px] shadow-inner">0</span>`;
+                    togglePesananBtn.className = "bg-purple-100 hover:bg-purple-200 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400 dark:border-purple-800 border border-purple-200 px-4 py-2 rounded-xl text-[10px] font-black shadow-lg flex items-center gap-2 transition-colors";
+                }
+            }
+            populateStatusFilterDropdown();
+            updateMenuNotificationIndicator();
+            renderRequestCards();
+        }
+        
+        function togglePesananCustView() {
+            isViewPesananCust = !isViewPesananCust;
+            const btn = document.getElementById('btnTogglePesanan');
+            if(isViewPesananCust) {
+                btn.innerHTML = `<i class="fa-solid fa-arrow-left"></i> Kembali ke Req Cust`;
+                btn.className = "bg-emerald-100 hover:bg-emerald-200 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 px-4 py-2 rounded-xl text-[10px] font-black shadow-lg flex items-center gap-2 transition-colors";
+            } else {
+                btn.innerHTML = `<i class="fa-solid fa-truck-ramp-box"></i> 🛒 Buka Pesanan Cust <span id="badge-tab-pesanan" class="bg-purple-500 text-white px-1.5 py-0.5 rounded-full text-[9px] shadow-inner">0</span>`;
+                btn.className = "bg-purple-100 hover:bg-purple-200 text-purple-700 dark:bg-purple-900/40 dark:text-purple-400 dark:border-purple-800 border border-purple-200 px-4 py-2 rounded-xl text-[10px] font-black shadow-lg flex items-center gap-2 transition-colors";
+            }
+            updateMenuNotificationIndicator();
+            renderRequestCards();
         }
 
         function setFormType(type) {
-            const btnReg = document.getElementById('btnFormReguler'), btnCek = document.getElementById('btnFormCekStock');
-            const formReg = document.getElementById('requestForm'), formCek = document.getElementById('cekStockForm');
-            if (type === 'reguler') {
-                if(btnReg) btnReg.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full bg-[#08c1e0] text-slate-900 shadow-md transition-all duration-150';
-                if(btnCek) btnCek.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full text-slate-300 hover:text-white bg-transparent transition-all duration-150';
-                if(formReg) formReg.classList.remove('hidden'); if(formCek) formCek.classList.add('hidden');
-            } else {
-                if(btnCek) btnCek.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full bg-[#08c1e0] text-slate-900 shadow-md transition-all duration-150';
-                if(btnReg) btnReg.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full text-slate-300 hover:text-white bg-transparent transition-all duration-150';
-                if(formCek) formCek.classList.remove('hidden'); if(formReg) formReg.classList.add('hidden');
-                setTimeout(() => { const cekInput = document.getElementById('inputCekStockSku'); if(cekInput) cekInput.focus(); }, 100);
-            }
+            requestAnimationFrame(() => {
+                const btnReg = document.getElementById('btnFormReguler'), btnCek = document.getElementById('btnFormCekStock');
+                const formReg = document.getElementById('requestForm'), formCek = document.getElementById('cekStockForm');
+                if (type === 'reguler') {
+                    if(btnReg) btnReg.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full bg-[#08c1e0] text-slate-900 shadow-md transition-all duration-150';
+                    if(btnCek) btnCek.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full text-slate-300 hover:text-white bg-transparent transition-all duration-150';
+                    if(formReg) formReg.classList.remove('hidden'); if(formCek) formCek.classList.add('hidden');
+                } else {
+                    if(btnCek) btnCek.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full bg-[#08c1e0] text-slate-900 shadow-md transition-all duration-150';
+                    if(btnReg) btnReg.className = 'flex-1 sm:flex-none px-3 py-1 text-xs font-black rounded-full text-slate-300 hover:text-white bg-transparent transition-all duration-150';
+                    if(formCek) formCek.classList.remove('hidden'); if(formReg) formReg.classList.add('hidden');
+                    const cekInput = document.getElementById('inputCekStockSku'); if(cekInput) cekInput.focus();
+                }
+            });
         }
 
         function populateStatusFilterDropdown() {
             const filterStatus = document.getElementById('filterStatus'); if (!filterStatus) return;
-            let statuses = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done STO', 'Done Transaksi', 'Done Chat Req', 'Done FU Cust', 'Pesanan Selesai', 'Done', 'Lainnya'];
+            let statuses = [];
+            if(activeDaftarTab === 'retur-ea') statuses = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done STO', 'Done Transaksi', 'Lainnya'];
+            else statuses = ['Waiting Process', 'Selesai', 'Done Ambil', 'Cancel', 'Lainnya'];
+            
             let html = '<option value="ALL">🔍 Semua Status</option>';
-            statuses.forEach(s => { html += `<option value="${s}">${s}</option>`; }); filterStatus.innerHTML = html;
+            statuses.forEach(s => { html += `<option value="${s}">${getStatusEmoji(s)} ${s}</option>`; }); filterStatus.innerHTML = html;
         }
+
+        function onTujuanChange() { const el = document.getElementById('inputTujuan'), resp = document.getElementById('respTujuanSubmit'); if (el && resp) { const val = el.value || '--'; resp.innerHTML = val !== '--' ? `${getTujuanIcon(val)} ${val}` : '--'; if(val!=='--') { resp.classList.remove('text-slate-500'); resp.classList.add('text-brand-700', 'dark:text-brand-400'); } } }
+        function onPengirimanChange() { const el = document.getElementById('inputPengiriman'), resp = document.getElementById('respPengirimanSubmit'); if (el && resp) { const val = el.value || '--'; resp.innerHTML = val !== '--' ? `${getPengirimanIcon(val)} ${val}` : '--'; if(val!=='--') { resp.classList.remove('text-slate-500'); resp.classList.add('text-brand-700', 'dark:text-brand-400'); } } }
+        function resetOtherFormResps() { ['respTujuanSubmit', 'respPengirimanSubmit'].forEach(id => { const el = document.getElementById(id); if(el) { el.innerHTML = '--'; el.classList.add('text-slate-500'); el.classList.remove('text-brand-700', 'dark:text-brand-400'); } }); }
 
         function getMultiBinCode(skuCode) { if(!skuCode) return 'N/A'; const sku = String(skuCode).trim().toUpperCase(); return binMapData.has(sku) ? binMapData.get(sku).join(' | ') : 'N/A'; }
 
-        // ======================= CEK STOK & PROMO =======================
+        // =========================================================================
+        // CEK STOCK LOGIC
+        // =========================================================================
         function onCekStockSkuChange() {
-            const inputEl = document.getElementById('inputCekStockSku'); const resultContainer = document.getElementById('stockResultContainer'); const countLabel = document.getElementById('cekStockCount');
+            const inputEl = document.getElementById('inputCekStockSku');
+            const resultContainer = document.getElementById('stockResultContainer');
+            const countLabel = document.getElementById('cekStockCount');
             if(!inputEl || !resultContainer || !countLabel) return;
+
             const val = String(inputEl.value).trim().toUpperCase();
-            if(val === "") { resultContainer.innerHTML = '<div class="text-center text-slate-500 text-[11px] py-10 font-bold flex flex-col items-center justify-center h-full"><i class="fa-solid fa-barcode text-4xl mb-3 opacity-30"></i>Silakan scan/ketik SKU.</div>'; countLabel.innerText = "0 Ditemukan"; return; }
+            if(val === "") {
+                resultContainer.innerHTML = '<div class="text-center text-slate-500 text-[11px] py-10 font-bold flex flex-col items-center justify-center h-full"><i class="fa-solid fa-barcode text-4xl mb-3 opacity-30"></i>Silakan scan/ketik SKU untuk melihat detail stok.</div>';
+                countLabel.innerText = "0 Ditemukan";
+                return;
+            }
 
             const baseSku = val.length >= 7 ? val.substring(0, 7) : val;
-            const matches = masterArtikel.filter(a => String(a.sku).toUpperCase().startsWith(baseSku));
+            
+            // Pencarian Cepat di String Array Master
+            let matches = [];
+            if(rawMasterArtikel) {
+                const lines = rawMasterArtikel.split(/\r?\n/);
+                for(let i=0; i<lines.length; i++) {
+                    if(!lines[i]) continue;
+                    let cols = lines[i].split('\t');
+                    if(cols[0] && cols[0].toUpperCase().startsWith(baseSku)) {
+                        matches.push({ sku: cols[0].trim().toUpperCase(), desc: cols[1]||'-', mc: cols[2]||'-', price: cleanNumberStr(cols[3]) });
+                        if(matches.length > 50) break; 
+                    }
+                }
+            }
 
             if(matches.length === 0) {
-                resultContainer.innerHTML = `<div class="text-center text-rose-500 text-[11px] py-10 font-bold">SKU <b>${val}</b> tidak ditemukan.</div>`;
-                countLabel.innerText = "0 Ditemukan"; return;
+                resultContainer.innerHTML = `<div class="text-center text-rose-500 text-[11px] py-10 font-bold flex flex-col items-center justify-center h-full"><i class="fa-regular fa-face-frown-open text-4xl mb-3 opacity-50"></i><p>SKU <b>${val}</b> tidak ditemukan.</p></div>`;
+                countLabel.innerText = "0 Ditemukan";
+                return;
             }
 
             countLabel.innerText = `${matches.length} Ditemukan`;
+
             let htmlOutput = '';
             matches.forEach(art => {
-                const sku = String(art.sku).toUpperCase(), desc = art.desc, basePrice = cleanNumberStr(art.price);
-                const bins = binMapData.get(sku) || [], totalStock = bins.length;
-                const isNewArrival = newArrivalSet.has(sku), promos = promoMapData.get(sku) || [];
+                const sku = art.sku; const desc = art.desc; const basePrice = art.price;
+                const bins = binMapData.get(sku) || []; const totalStock = bins.length;
                 
                 let priceHtml = `<div class="font-black text-emerald-600 dark:text-emerald-400 text-sm">Rp ${basePrice.toLocaleString('id-ID')}</div>`;
-                let badgeHtml = '';
-                if (isNewArrival) badgeHtml += `<span class="bg-amber-500 text-white px-2 py-0.5 rounded text-[9px] font-black uppercase shadow-sm flex items-center gap-1"><i class="fa-solid fa-star"></i> NEW ARRIVAL</span>`;
                 
-                if (promos.length > 0) {
-                    const activePromo = promos[0];
-                    const percStr = String(activePromo.persentase).replace('%','');
-                    const perc = parseFloat(percStr) || 0;
-                    const promoPrice = basePrice - (basePrice * perc / 100);
-                    
-                    badgeHtml += `<span class="bg-rose-500 text-white px-2 py-0.5 rounded text-[9px] font-black uppercase shadow-sm flex items-center gap-1"><i class="fa-solid fa-tag"></i> ${activePromo.name}</span>`;
-                    priceHtml = `<div class="flex flex-col items-end"><span class="text-[10px] text-slate-400 line-through font-bold">Rp ${basePrice.toLocaleString('id-ID')}</span><span class="font-black text-rose-600 dark:text-rose-400 text-sm">Rp ${promoPrice.toLocaleString('id-ID')}</span></div>`;
+                let binListHtml = '';
+                if(totalStock > 0) {
+                    binListHtml = `<div class="flex flex-wrap gap-1 mt-2">` + bins.map(b => `<span class="bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-1.5 py-0.5 rounded font-mono text-[9px] font-bold">${b}</span>`).join('') + `</div>`;
+                } else {
+                    binListHtml = `<p class="text-[10px] text-rose-500 font-bold mt-2"><i class="fa-solid fa-box-open"></i> Stok Kosong di Store (OOS)</p>`;
                 }
-
-                let binListHtml = totalStock > 0 ? `<div class="flex flex-wrap gap-1 mt-2">` + bins.map(b => `<span class="bg-slate-200 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 px-1.5 py-0.5 rounded font-mono text-[9px] font-bold">${b}</span>`).join('') + `</div>` : `<p class="text-[10px] text-rose-500 font-bold mt-2"><i class="fa-solid fa-box-open"></i> OOS</p>`;
+                
+                const objStr = encodeURIComponent(JSON.stringify(art));
 
                 htmlOutput += `
                     <div class="cekung p-3.5 rounded-xl border border-slate-300/30 dark:border-slate-700/30 flex flex-col gap-2 relative">
-                        <div class="flex flex-wrap gap-2 absolute top-3.5 right-3.5 justify-end">${badgeHtml}</div>
-                        <div class="pr-20"><span class="font-mono font-black text-brand-700 dark:text-brand-400 text-xs flex items-center gap-1.5"><i class="fa-solid fa-barcode text-brand-500"></i> ${sku}</span><h4 class="font-bold text-slate-800 dark:text-slate-200 text-xs mt-1 leading-snug">${desc}</h4></div>
+                        <div class="pr-20">
+                            <span class="font-mono font-black text-brand-700 dark:text-brand-400 text-xs flex items-center gap-1.5"><i class="fa-solid fa-barcode text-brand-500"></i> ${sku}</span>
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200 text-xs mt-1 leading-snug">${desc}</h4>
+                        </div>
+                        
                         <div class="flex items-end justify-between pt-2 mt-1 border-t border-slate-400/20 dark:border-slate-700/30">
-                            <div class="flex-1"><span class="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase flex items-center gap-1.5 mb-1"><i class="fa-solid fa-boxes-stacked"></i> Stok & Lokasi Bin (Total: <span class="text-brand-600 dark:text-brand-400 text-sm">${totalStock}</span>)</span>${binListHtml}</div>
+                            <div class="flex-1">
+                                <span class="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase flex items-center gap-1.5 mb-1"><i class="fa-solid fa-boxes-stacked"></i> Stok & Lokasi Bin (Total: <span class="text-brand-600 dark:text-brand-400 text-sm">${totalStock}</span>)</span>
+                                ${binListHtml}
+                            </div>
                             <div class="shrink-0 text-right ml-3">${priceHtml}</div>
                         </div>
-                        <button onclick="addToReqCust('${sku}', '${desc.replace(/'/g, "\\'")}')" class="mt-3 w-full py-2 bg-brand-500/10 hover:bg-brand-500 border border-brand-500/30 hover:border-brand-500 text-brand-700 dark:text-brand-400 hover:text-white rounded-lg text-[10px] font-black transition-colors flex items-center justify-center gap-1.5 shadow-sm group"><i class="fa-solid fa-plus group-hover:scale-125 transition-transform"></i> TAMBAH KE REQ CUST (DONE)</button>
-                    </div>`;
+                        
+                        <!-- TOMBOL PLUS KHUSUS REQ CUST -->
+                        <div class="absolute top-3.5 right-3.5">
+                            <button onclick="openQuickReqModal('${objStr}')" class="w-8 h-8 rounded-full btn-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform" title="Tambah Langsung ke Req Cust"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                `;
             });
             resultContainer.innerHTML = htmlOutput;
         }
-
-        function addToReqCust(sku, desc) {
-            const mArt = artikelMapData.get(sku) || { desc: desc, mc: '-', price: 0 };
-            const price = cleanNumberStr(mArt.price);
-            const ts = new Date().toISOString();
-            const newReq = { id: getNextId('REQ'), timestamp: ts, kodeSite: 'Otomatis', siteName: 'Req Cust', branch: '-', skuCode: sku, skuDesc: mArt.desc, mcLevel: mArt.mc, binCode: getMultiBinCode(sku), qty: 1, hargaSatuan: price, totalHarga: price, tujuan: 'Req Cust', pengiriman: 'Direct', status: 'Done', noSto: '', keterangan: 'Masuk otomatis via Cek Stock', keteranganProses: '' };
-            requestsList.unshift(newReq); pushDataToBackend(newReq); saveDataToCache(); 
-            showToast(`✅ ${sku} masuk ke Req Cust (Done)`, false);
-            setTimeout(() => { const cekInput = document.getElementById('inputCekStockSku'); if(cekInput) { cekInput.value = ''; cekInput.focus(); onCekStockSkuChange(); } }, 200);
+        
+        // =========================================================================
+        // FORM PESANAN CUST 
+        // =========================================================================
+        function openPesananCustModal() {
+            const modal = document.getElementById('pesananCustModal'); const content = document.getElementById('pesananCustModalContent');
+            if(modal) modal.classList.remove('hidden'); if(content) requestAnimationFrame(()=>content.classList.remove('scale-95', 'opacity-0'));
+            
+            // Reset fields
+            ['pc-nama', 'pc-wa', 'pc-sku', 'pc-qty', 'pc-store', 'pc-pic'].forEach(id => {
+                const el = document.getElementById(id); if(el) el.value = '';
+            });
+            document.getElementById('pc-qty').value = 1;
+            document.getElementById('pc-desc').innerHTML = ''; document.getElementById('pc-site-name').innerHTML = '';
         }
 
-        // ======================= PESANAN CUST =======================
-        function openPesananCustModal() { document.getElementById('pesananCustModal').classList.remove('hidden'); requestAnimationFrame(() => document.getElementById('pesananCustModalContent').classList.remove('scale-95', 'opacity-0')); const c = document.getElementById('pesananSkuContainer'); if (c && c.children.length === 0) addPesananSkuRow(); }
-        function closePesananCustModal() { document.getElementById('pesananCustModalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => document.getElementById('pesananCustModal').classList.add('hidden'), 150); }
-
-        function addPesananSkuRow() {
-            document.getElementById('pesananSkuContainer').insertAdjacentHTML('beforeend', `<div class="pesanan-sku-row flex items-start gap-2 p-3 cekung border border-slate-300 dark:border-slate-700 rounded-xl relative mt-2 shadow-sm"><div class="flex-1 relative"><input type="text" required placeholder="KODE SKU" oninput="onPesananSkuChange()" class="pesanan-sku-code cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200"></div><div class="w-20"><input type="number" required min="1" placeholder="Qty" oninput="onPesananSkuChange()" class="pesanan-qty cekung w-full px-3 py-2 text-xs font-black text-center text-slate-800 dark:text-slate-200"></div><button type="button" onclick="this.closest('.pesanan-sku-row').remove(); onPesananSkuChange();" class="btn-cembung w-9 h-9 rounded-lg flex items-center justify-center text-rose-500 hover:bg-rose-500 hover:text-white transition-colors mt-0.5"><i class="fa-solid fa-trash text-[11px]"></i></button></div>`);
+        function closePesananCustModal() {
+            const modal = document.getElementById('pesananCustModal'); const content = document.getElementById('pesananCustModalContent');
+            if(content) content.classList.add('scale-95', 'opacity-0'); if(modal) setTimeout(()=>modal.classList.add('hidden'), 200);
         }
 
         function onPesananSkuChange() {
-            let total = 0, html = '';
-            document.getElementById('respPesananNama').innerText = document.getElementById('inputPesananNama').value || '--';
-            document.getElementById('respPesananWA').innerText = document.getElementById('inputPesananWA').value || '--';
-            document.getElementById('respPesananTujuan').innerText = document.getElementById('inputPesananTujuan').value || '--';
-            document.getElementById('respPesananPIC').innerText = document.getElementById('inputPesananPIC').value || '--';
+            const val = document.getElementById('pc-sku').value.trim().toUpperCase();
+            const descEl = document.getElementById('pc-desc');
+            const art = artikelMapData.get(val);
+            if(art) descEl.innerHTML = `<span class="text-emerald-600 font-bold">${art.desc} (Rp ${art.price.toLocaleString('id-ID')})</span>`;
+            else descEl.innerHTML = `<span class="text-slate-400">SKU tidak ditemukan (Harap cek kembali)</span>`;
+        }
 
-            document.querySelectorAll('.pesanan-sku-row').forEach(row => {
-                const skuVal = String(row.querySelector('.pesanan-sku-code').value).trim().toUpperCase(), qtyVal = parseInt(row.querySelector('.pesanan-qty').value) || 0;
-                if (!skuVal) return; const mArt = artikelMapData.get(skuVal);
-                if (mArt) {
-                    const price = cleanNumberStr(mArt.price), subtotal = price * qtyVal; total += subtotal;
-                    html += `<div class="cekung p-2.5 rounded-lg flex justify-between items-center mb-1.5 shadow-sm border border-slate-300 dark:border-slate-700"><div class="min-w-0 flex-1 pr-2"><div class="font-mono font-black text-brand-700 dark:text-brand-400 text-[10px]"><i class="fa-solid fa-barcode text-brand-500"></i> ${skuVal} <span class="bg-slate-200 dark:bg-slate-700 px-1.5 py-0.5 rounded text-[9px] shadow-sm ml-1">x${qtyVal}</span></div><div class="text-[9px] font-bold text-slate-700 dark:text-slate-300 truncate mt-1">${mArt.desc}</div></div><div class="font-black text-emerald-600 dark:text-emerald-400 text-xs shrink-0 text-right">Rp ${subtotal.toLocaleString('id-ID')}</div></div>`;
-                }
-            });
-            document.getElementById('respPesananSkuList').innerHTML = html || '<div class="text-center text-slate-500 text-[10px] py-4 font-bold border border-dashed border-slate-300 dark:border-slate-700 rounded-lg">Belum ada artikel valid</div>';
-            document.getElementById('respPesananTotalHarga').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        function onPesananStoreChange() {
+            const val = document.getElementById('pc-store').value.trim().toUpperCase();
+            const siteEl = document.getElementById('pc-site-name');
+            const site = siteMapData.get(val);
+            if(site) siteEl.innerHTML = `<span class="text-emerald-600 font-bold">${site.name} - ${site.branch}</span>`;
+            else siteEl.innerHTML = `<span class="text-slate-400">Kode Store tidak ditemukan</span>`;
+        }
+
+        function submitPesananCust() {
+            const nama = document.getElementById('pc-nama').value.trim();
+            const wa = document.getElementById('pc-wa').value.trim();
+            const sku = document.getElementById('pc-sku').value.trim().toUpperCase();
+            const qty = parseInt(document.getElementById('pc-qty').value) || 1;
+            const store = document.getElementById('pc-store').value.trim().toUpperCase();
+            const pic = document.getElementById('pc-pic').value.trim();
+
+            if(!nama || !wa || !sku || !store || !pic) return showToast('⚠️ Lengkapi semua form wajib (*)', true);
+
+            const art = artikelMapData.get(sku) || { desc: 'Manual Item', mc: '-', price: 0 };
+            const siteTarget = siteMapData.get(store) || { name: 'Unknown', branch: '-' };
+            
+            const newReq = {
+                id: String(getNextId('REQ')), timestamp: String(getFormattedDateTime()), kodeSite: "2013", siteName: "EIGER SILIWANGI BOGOR", branch: "BOGOR",
+                skuCode: sku, skuDesc: art.desc, mcLevel: art.mc, binCode: "N/A", qty: qty, hargaSatuan: art.price, totalHarga: art.price * qty, 
+                tujuan: "Pesanan Cust", pengiriman: "Pick Up", status: 'Waiting Process', noSto: '', keterangan: '', keteranganProses: '', durasiRespons: 0,
+                namaCust: nama, noWa: wa, storeTujuan: `${store} - ${siteTarget.name}`, pic: pic
+            };
+            
+            requestsList.unshift(newReq); pushDataToBackend(newReq); saveDataToCache();
+            closePesananCustModal(); refreshCoreUI(); showToast('✅ Pesanan Cust Berhasil Disubmit!', false);
+        }
+
+        // =========================================================================
+        // QUICK REQ CUST (Tombol Plus)
+        // =========================================================================
+        let currentQuickItem = null;
+        function openQuickReqModal(encodedObj) {
+            try {
+                currentQuickItem = JSON.parse(decodeURIComponent(encodedObj));
+                document.getElementById('qr-sku').innerHTML = `<i class="fa-solid fa-barcode text-brand-500 mr-1"></i> ${currentQuickItem.sku}`;
+                document.getElementById('qr-desc').innerText = currentQuickItem.desc;
+                document.getElementById('qr-qty').value = 1;
+                
+                const modal = document.getElementById('quickReqModal'); const content = document.getElementById('quickReqModalContent');
+                if(modal) modal.classList.remove('hidden'); if(content) requestAnimationFrame(()=>content.classList.remove('scale-95', 'opacity-0'));
+            } catch(e){}
+        }
+
+        function closeQuickReqModal() {
+            const modal = document.getElementById('quickReqModal'); const content = document.getElementById('quickReqModalContent');
+            if(content) content.classList.add('scale-95', 'opacity-0'); if(modal) setTimeout(()=>modal.classList.add('hidden'), 150); currentQuickItem = null;
+        }
+
+        function submitQuickReq() {
+            if(!currentQuickItem) return;
+            const qty = parseInt(document.getElementById('qr-qty').value) || 1;
+            const sku = currentQuickItem.sku; const art = artikelMapData.get(sku) || currentQuickItem;
+            
+            const newReq = {
+                id: String(getNextId('REQ')), timestamp: String(getFormattedDateTime()), kodeSite: "2013", siteName: "EIGER SILIWANGI BOGOR", branch: "BOGOR",
+                skuCode: sku, skuDesc: art.desc, mcLevel: art.mc, binCode: "N/A", qty: qty, hargaSatuan: art.price, totalHarga: art.price * qty, 
+                tujuan: "Req Cust", pengiriman: "Ambil Sendiri", status: 'Waiting Process', noSto: '', keterangan: 'Quick Request dari Cek Stock', keteranganProses: '', durasiRespons: 0
+            };
+            
+            requestsList.unshift(newReq); pushDataToBackend(newReq); saveDataToCache();
+            closeQuickReqModal(); refreshCoreUI(); showToast('✅ Req Cust Berhasil Dikirim!');
+        }
+
+        // =========================================================================
+
+        function onKodeSiteChange() {
+            const inputKodeSiteEl = document.getElementById('inputKodeSite'); if (!inputKodeSiteEl) return;
+            const val = String(inputKodeSiteEl.value).trim().toUpperCase(); if(val === "") { resetSiteResp(); return; }
+            const matched = siteMapData.get(val); const badge = document.getElementById('siteMatchBadge');
+            const respSiteName = document.getElementById('respDetailSiteName'), respKode = document.getElementById('respDetailKodeSite'), respBranch = document.getElementById('respDetailBranch');
+            if (matched) {
+                if(respKode) { respKode.innerText = matched.kode; respKode.classList.remove('text-slate-500'); respKode.classList.add('text-brand-700', 'dark:text-brand-400'); }
+                if(respSiteName) { respSiteName.innerText = matched.name; respSiteName.classList.remove('text-slate-500'); respSiteName.classList.add('text-slate-800', 'dark:text-slate-200'); }
+                if(respBranch) { respBranch.innerText = matched.branch || '-'; respBranch.classList.remove('text-slate-500'); respBranch.classList.add('text-slate-800', 'dark:text-slate-200'); }
+                if(badge) badge.classList.remove('hidden');
+            } else resetSiteResp();
         }
         
-        function submitPesananCust(e) {
-            e.preventDefault();
-            const nama = document.getElementById('inputPesananNama').value.trim(), wa = document.getElementById('inputPesananWA').value.trim(), tujuan = document.getElementById('inputPesananTujuan').value.trim(), pic = document.getElementById('inputPesananPIC').value.trim();
-            let validItems = [];
-            document.querySelectorAll('.pesanan-sku-row').forEach(row => {
-                const skuCode = String(row.querySelector('.pesanan-sku-code').value).trim().toUpperCase(), qty = parseInt(row.querySelector('.pesanan-qty').value) || 0;
-                if (skuCode && qty > 0) { const mArt = artikelMapData.get(skuCode) || { desc: 'Manual Item', mc: '-', price: 0 }; validItems.push({ skuCode, qty, matchedArtikel: mArt }); }
+        function resetSiteResp() {
+            const badge = document.getElementById('siteMatchBadge'); if(badge) badge.classList.add('hidden');
+            ['respDetailKodeSite', 'respDetailSiteName', 'respDetailBranch'].forEach(id => { const el = document.getElementById(id); if(el) { el.innerText = '--'; el.classList.remove('text-brand-700', 'dark:text-brand-400', 'text-slate-800', 'dark:text-slate-200'); el.classList.add('text-slate-500'); } });
+        }
+
+        function addDynamicSkuRow() {
+            const container = document.getElementById('dynamicSkuContainer'); if(!container) return;
+            const rowHTML = `
+                <div class="sku-item-row flex items-start gap-3 p-3 cekung border border-slate-300/30 dark:border-slate-700/30 rounded-xl relative mt-3">
+                    <div class="flex-1 relative">
+                        <label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">SKU Code</label>
+                        <input type="text" required autocomplete="off" spellcheck="false" placeholder="INPUT SKU" oninput="onDynamicSkuChange()" class="dyn-sku-code cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200">
+                        <span class="dyn-match-badge hidden absolute right-3 top-7 text-sm text-emerald-500"><i class="fa-solid fa-circle-check"></i></span>
+                    </div>
+                    <div class="w-20 sm:w-24">
+                        <label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">Qty</label>
+                        <input type="number" required min="1" placeholder="0" oninput="onDynamicSkuChange()" autocomplete="off" class="dyn-qty cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200">
+                    </div>
+                    <button type="button" onclick="removeDynamicSkuRow(this)" class="mt-5 btn-cembung w-8 h-8 rounded-lg flex items-center justify-center shrink-0 border border-rose-500/30 text-rose-500 hover:text-rose-600"><i class="fa-solid fa-trash text-[10px]"></i></button>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', rowHTML);
+        }
+
+        function removeDynamicSkuRow(btn) { btn.closest('.sku-item-row').remove(); onDynamicSkuChange(); }
+
+        function onDynamicSkuChange() {
+            const rows = document.querySelectorAll('.sku-item-row'); let totalHargaAll = 0; let htmlList = '';
+            rows.forEach(row => {
+                const skuInput = row.querySelector('.dyn-sku-code'), qtyInput = row.querySelector('.dyn-qty'), badge = row.querySelector('.dyn-match-badge');
+                const skuVal = String(skuInput.value).trim().toUpperCase(), qtyVal = parseInt(qtyInput.value) || 0;
+                
+                if (skuVal === "") { if (badge) badge.classList.add('hidden'); return; }
+                const matchedArt = artikelMapData.get(skuVal);
+                if (matchedArt) {
+                    if (badge) badge.classList.remove('hidden');
+                    const price = cleanNumberStr(matchedArt.price); const subtotal = price * qtyVal; totalHargaAll += subtotal;
+                    htmlList += `
+                        <div class="cekung p-2.5 rounded-lg flex flex-col gap-1.5 shadow-sm border border-slate-300/20 dark:border-slate-700/30">
+                            <div class="flex justify-between items-center">
+                                <span class="font-mono font-black text-brand-700 dark:text-brand-400 text-xs"><i class="fa-solid fa-barcode text-brand-500"></i> ${skuVal}</span>
+                                <span class="font-black text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded text-[10px] shadow-sm">Qty: ${qtyVal}</span>
+                            </div>
+                            <div class="text-[10px] font-bold text-slate-700 dark:text-slate-300 break-words leading-tight">${matchedArt.desc}</div>
+                            <div class="flex justify-between items-center text-[10px] pt-1.5 border-t border-slate-400/20 dark:border-slate-700/30 mt-1">
+                                <span class="font-bold text-slate-500"><i class="fa-solid fa-layer-group"></i> ${matchedArt.mc}</span>
+                                <span class="font-black text-emerald-600 dark:text-emerald-400">Rp ${subtotal.toLocaleString('id-ID')}</span>
+                            </div>
+                        </div>`;
+                } else { if (badge) badge.classList.add('hidden'); }
             });
-            if (validItems.length === 0) return showToast('⚠️ Minimal 1 artikel wajib diisi!', true);
 
-            const ts = new Date().toISOString(), ket = `Nama Cust: ${nama}\nNo WA: ${wa}\nPIC: ${pic}\nToko Tujuan: ${tujuan}`;
-            validItems.forEach(item => {
-                const price = cleanNumberStr(item.matchedArtikel.price);
-                const newReq = { id: getNextId('REQ'), timestamp: ts, kodeSite: 'CUST', siteName: nama, branch: '-', skuCode: item.skuCode, skuDesc: item.matchedArtikel.desc, mcLevel: item.matchedArtikel.mc, binCode: getMultiBinCode(item.skuCode), qty: item.qty, hargaSatuan: price, totalHarga: price * item.qty, tujuan: 'Pesanan Cust', pengiriman: tujuan, status: 'Waiting Process', noSto: '', keterangan: ket, keteranganProses: '' };
-                requestsList.unshift(newReq); pushDataToBackend(newReq);
-            });
-            saveDataToCache(); document.getElementById('formPesananCust').reset(); document.getElementById('pesananSkuContainer').innerHTML = ''; addPesananSkuRow(); onPesananSkuChange(); closePesananCustModal(); switchTab('daftar'); showToast('✅ Pesanan Berhasil Dibuat!', false);
-        }
-
-        // ======================= DATA DAFTAR & DASHBOARD =======================
-        function renderRequestCards() {
-            const grid = document.getElementById('requestsGrid'); if (!grid) return;
-            const searchInput = document.getElementById('searchRequests'), filterStatus = document.getElementById('filterStatus'), countLabel = document.getElementById('requestsCountLabel');
-            const q = searchInput ? String(searchInput.value).toLowerCase() : '', statusFilter = filterStatus ? filterStatus.value : 'ALL';
-
-            let cleanRequestsList = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
-            const filtered = cleanRequestsList.filter(item => {
-                const matchQ = String(item.siteName).toLowerCase().includes(q) || String(item.skuCode).toLowerCase().includes(q);
-                const matchStatus = statusFilter === 'ALL' || item.status === statusFilter;
-                return matchQ && matchStatus;
-            });
-
-            const groupedRequests = new Map();
-            filtered.forEach(item => {
-                const key = `${item.kodeSite}|${item.timestamp}|${item.tujuan}`;
-                if (!groupedRequests.has(key)) groupedRequests.set(key, { groupId: key, timestamp: item.timestamp, kodeSite: item.kodeSite, siteName: item.siteName, tujuan: item.tujuan, status: item.status, items: [], totalQty: 0, totalHarga: 0 });
-                const group = groupedRequests.get(key); group.items.push(item); group.totalQty += item.qty; group.totalHarga += item.totalHarga;
-                if (group.status !== item.status) group.status = 'Mixed'; 
-            });
-
-            const groupedFiltered = Array.from(groupedRequests.values());
-            if(countLabel) countLabel.innerText = `${groupedFiltered.length} Grup Data`;
-            if (groupedFiltered.length === 0) { grid.innerHTML = `<div class="col-span-full py-8 text-center"><p class="text-xs text-slate-500 font-bold">Tidak ada data ditemukan.</p></div>`; return; }
-
-            grid.innerHTML = groupedFiltered.map(group => {
-                const displayStatus = group.status === 'Mixed' ? 'Status Berbeda' : group.status;
-                return `<div class="cembung p-3.5 pb-12 flex flex-col relative text-sm"><div class="flex justify-between mb-2"><div class="w-2/3 pr-2"><span class="font-mono font-black text-brand-700 text-[10px]"><i class="fa-solid fa-store"></i> ${group.kodeSite}</span><h4 class="font-black text-xs text-slate-900 dark:text-slate-100 break-words leading-snug">${group.siteName}</h4></div><div class="flex items-center shrink-0"><span class="px-2 py-0.5 rounded font-black text-[10px] border border-slate-500/20">${displayStatus}</span><button onclick="deleteGroupRequest('${group.groupId}')" class="admin-only ml-1.5 text-rose-500 border border-rose-500/20 w-6 h-6 rounded"><i class="fa-solid fa-trash text-[10px]"></i></button></div></div><div class="cekung p-2.5 space-y-1">${group.items.slice(0,3).map(i => `<div class="flex justify-between text-[10px]"><span class="font-black text-brand-700">${i.skuCode}</span><span class="font-black text-slate-800 dark:text-slate-100 truncate w-32">${i.skuDesc}</span><span>x${i.qty}</span></div>`).join('')}${group.items.length>3?`<div class="text-center text-[10px] font-black">+${group.items.length-3} Lainya</div>`:''}</div><div class="mt-2 text-[10px] font-black text-slate-500">Tujuan: ${group.tujuan}</div><button onclick="openGroupDetailModal('${group.groupId}')" class="absolute bottom-3 right-3 btn-primary font-black py-1.5 px-3 rounded-lg text-xs">Detail / Proses</button></div>`;
-            }).join('');
-        }
-
-        function updateDashboard() {
-            const activeReqs = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
-            const returList = activeReqs.filter(r => r.tujuan === 'Retur'), eaList = activeReqs.filter(r => r.tujuan === 'Endless Aisle');
-            
-            const eT = document.getElementById('dash-total-nominal'); if(eT) eT.innerText = `Rp ${activeReqs.reduce((a,c)=>a+(c.totalHarga||0),0).toLocaleString('id-ID')}`;
-            const eR = document.getElementById('dash-retur-total'); if(eR) eR.innerText = `Rp ${returList.reduce((a,c)=>a+(c.totalHarga||0),0).toLocaleString('id-ID')}`;
-            const eE = document.getElementById('dash-ea-total'); if(eE) eE.innerText = `Rp ${eaList.reduce((a,c)=>a+(c.totalHarga||0),0).toLocaleString('id-ID')}`;
-            const eW = document.getElementById('dash-waiting-count'); if(eW) eW.innerText = activeReqs.filter(r => r.status === 'Waiting Process').length;
-
-            renderTopSkuReqCustTable(activeReqs); renderTopSkuTable(activeReqs);
-        }
-
-        function renderTopSkuReqCustTable(filteredReqs) {
-            const tbody = document.getElementById('dash-top-sku-req-body'); if (!tbody) return;
-            const skuMap = {}; 
-            const reqCustList = filteredReqs.filter(r => r.tujuan === 'Req Cust' || r.tujuan === 'Pesanan Cust');
-            reqCustList.forEach(r => { const sku = String(r.skuCode || 'UNK'); if(!skuMap[sku]) skuMap[sku] = { sku: sku, desc: r.skuDesc, mc: r.mcLevel, qty: 0, total: 0, freq: 0 }; skuMap[sku].qty += (r.qty || 0); skuMap[sku].total += (r.totalHarga || 0); skuMap[sku].freq += 1; });
-            const top = Object.values(skuMap).sort((a,b)=>b.freq-a.freq).slice(0,5);
-            tbody.innerHTML = top.length ? top.map((i,idx)=>`<tr><td class="p-2.5 font-black">#${idx+1}</td><td class="p-2.5 font-mono text-brand-700">${i.sku}</td><td class="p-2.5 max-w-[150px] truncate" title="${i.desc}">${i.desc}</td><td class="p-2.5 font-black">${i.mc||'-'}</td><td class="p-2.5 text-right font-black">${i.qty}</td><td class="p-2.5 text-right text-emerald-500 font-bold">Rp ${Number(i.total).toLocaleString('id-ID')}</td><td class="p-2.5 text-center font-black text-brand-700 bg-brand-500/10">${i.freq}x</td></tr>`).join('') : `<tr><td colspan="7" class="p-4 text-center font-bold">Belum ada data Req Cust / Pesanan Cust</td></tr>`;
-        }
-
-        function renderTopSkuTable(filteredReqs) {
-            const tbody = document.getElementById('dash-top-sku-body'); if (!tbody) return;
-            const skuMap = {}; 
-            const reList = filteredReqs.filter(r => r.tujuan === 'Retur' || r.tujuan === 'Endless Aisle');
-            reList.forEach(r => { const sku = String(r.skuCode || 'UNK'); if(!skuMap[sku]) skuMap[sku] = { sku: sku, desc: r.skuDesc, mc: r.mcLevel, qty: 0, total: 0, freq: 0 }; skuMap[sku].qty += (r.qty || 0); skuMap[sku].total += (r.totalHarga || 0); skuMap[sku].freq += 1; });
-            const top = Object.values(skuMap).sort((a,b)=>b.freq-a.freq).slice(0,5);
-            tbody.innerHTML = top.length ? top.map((i,idx)=>`<tr><td class="p-2.5 font-black">#${idx+1}</td><td class="p-2.5 font-mono text-brand-700">${i.sku}</td><td class="p-2.5 max-w-[150px] truncate" title="${i.desc}">${i.desc}</td><td class="p-2.5 font-black">${i.mc||'-'}</td><td class="p-2.5 text-right font-black">${i.qty}</td><td class="p-2.5 text-right text-emerald-500 font-bold">Rp ${Number(i.total).toLocaleString('id-ID')}</td><td class="p-2.5 text-center font-black text-brand-700 bg-brand-500/10">${i.freq}x</td></tr>`).join('') : `<tr><td colspan="7" class="p-4 text-center font-bold">Belum ada data Retur / EA</td></tr>`;
-        }
-
-        // ======================= MODAL PROSES BATCH =======================
-        function openGroupDetailModal(groupId) {
-            const parts = groupId.split('|'), kodeSite = parts[0], timestamp = parts[1], tujuan = parts[2];
-            const groupItems = requestsList.filter(r => r.kodeSite === kodeSite && r.timestamp === timestamp && r.tujuan === tujuan && !deletedReqIds.includes(r.id.toUpperCase()));
-            if (groupItems.length === 0) return; activeDetailReqIds = groupItems.map(r => r.id); const firstItem = groupItems[0];
-            
-            const mSiteInfo = document.getElementById('mSiteInfo'); if(mSiteInfo) mSiteInfo.innerHTML = `${firstItem.kodeSite} - ${firstItem.siteName}`;
-            const container = document.getElementById('mGroupedItemsContainer');
-            if (container) {
-                container.innerHTML = groupItems.map((item, idx) => {
-                    let bin = getMultiBinCode(item.skuCode); if (bin === 'N/A' && item.binCode !== '-') bin = item.binCode;
-                    return `<div class="cekung p-2.5 rounded-lg border border-slate-300/20 dark:border-slate-700/30"><div class="flex items-center justify-between mb-1"><span class="font-mono font-black text-brand-700 text-xs">${idx+1}. <i class="fa-solid fa-barcode"></i> ${item.skuCode}</span><span class="font-black bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded text-[10px]">Qty: ${item.qty}</span></div><div class="text-[11px] font-bold break-words">${item.skuDesc}</div><div class="flex justify-between items-center text-[10px] pt-1.5 mt-1.5 border-t border-slate-400/20 text-slate-500"><span>${item.mcLevel}</span><span>Bin: ${bin}</span></div></div>`;
-                }).join('');
+            const listContainer = document.getElementById('respDynamicSkuList');
+            if (listContainer) {
+                if (htmlList === '') listContainer.innerHTML = '<div class="text-center text-slate-500 text-[10px] py-4 font-bold border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg">Belum ada artikel valid yang diinput</div>';
+                else listContainer.innerHTML = htmlList;
             }
-            
-            const mTotalArt = document.getElementById('mTotalArtikel'); if(mTotalArt) mTotalArt.innerText = groupItems.length;
-            const mq = document.getElementById('mQty'); if(mq) mq.innerText = groupItems.reduce((acc, curr) => acc + curr.qty, 0);
-            const mthbox = document.getElementById('mTotalHargaBox'), mth = document.getElementById('mTotalHarga'), totalHarga = groupItems.reduce((acc, curr) => acc + (curr.totalHarga||0), 0);
-            
-            if (tujuan === 'Retur' || tujuan === 'Endless Aisle') { if(mthbox) { mthbox.classList.remove('hidden'); if(mth) mth.innerText = `Rp ${totalHarga.toLocaleString('id-ID')}`; } } else { if(mthbox) { mthbox.classList.add('hidden'); } }
-
-            const statusSelect = document.getElementById('modalStatusSelect');
-            if(statusSelect) {
-                let stts = [];
-                if (tujuan === 'Retur') stts = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done STO', 'Lainnya'];
-                else if (tujuan === 'Endless Aisle') stts = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done Transaksi', 'Lainnya'];
-                else if (tujuan === 'Pesanan Cust') stts = ['Waiting Process', 'Done Chat Req', 'Done FU Cust', 'Pesanan Selesai', 'Cancel', 'Lainnya'];
-                else stts = ['Waiting Process', 'Done', 'Cancel', 'Lainnya'];
-                statusSelect.innerHTML = stts.map(s => `<option value="${s}" ${firstItem.status===s?'selected':''}>${s}</option>`).join('');
-            }
-
-            const mik = document.getElementById('modalInputKeterangan'); if(mik) mik.value = firstItem.keteranganProses || '';
-            const minost = document.getElementById('modalInputNoSto'); if(minost) minost.value = firstItem.noSto || '';
-            onModalStatusChange();
-            const processBox = document.getElementById('internalProcessBox'); if (processBox) { if (isAdminMode) processBox.classList.remove('hidden'); else processBox.classList.add('hidden'); }
-
-            document.getElementById('detailModal').classList.remove('hidden'); requestAnimationFrame(() => document.getElementById('detailModalContent').classList.remove('scale-95', 'opacity-0'));
-        }
-        function closeDetailModal() { document.getElementById('detailModalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => document.getElementById('detailModal').classList.add('hidden'), 150); activeDetailReqIds = []; }
-
-        function onModalStatusChange() {
-            const statusSelect = document.getElementById('modalStatusSelect'), stoContainer = document.getElementById('modalStoContainer');
-            if(!statusSelect || activeDetailReqIds.length === 0) return;
-            if(stoContainer) { if(statusSelect.value === 'Done STO') stoContainer.classList.remove('hidden'); else stoContainer.classList.add('hidden'); }
+            const rTotal = document.getElementById('respTotalHarga'); if (rTotal) rTotal.innerText = `Rp ${totalHargaAll.toLocaleString('id-ID')}`;
         }
 
-        function updateRequestStatus() {
-            if (activeDetailReqIds.length === 0 || !isAdminMode) return; 
-            const statusSelect = document.getElementById('modalStatusSelect'), inputNoStoEl = document.getElementById('modalInputNoSto');
-            const newNoSto = String(inputNoStoEl.value).trim() || '', newStatus = statusSelect.value || 'Waiting Process';
-            const inputKetEl = document.getElementById('modalInputKeterangan'); const newKet = inputKetEl ? String(inputKetEl.value).trim() : '';
-            if (newStatus === 'Done STO' && !newNoSto) return showToast('⚠ Nomor STO wajib diisi.', true);
-
-            activeDetailReqIds.forEach(id => {
-                let item = requestsList.find(r => r.id === id); if(!item) return;
-                item.status = newStatus; item.keteranganProses = newKet; item.noSto = newNoSto;
-                pushDataToBackend({ action: "update", id: item.id, status: newStatus, keteranganProses: newKet, noSto: newNoSto });
-            });
-            saveDataToCache(); closeDetailModal(); renderRequestCards(); showToast('✅ Status batch diperbarui.', false);
-        }
-
-        function deleteGroupRequest(groupId) {
-            if (!isAdminMode) return;
-            const parts = groupId.split('|'), kodeSite = parts[0], timestamp = parts[1], tujuan = parts[2];
-            const groupItems = requestsList.filter(r => r.kodeSite === kodeSite && r.timestamp === timestamp && r.tujuan === tujuan && !deletedReqIds.includes(r.id.toUpperCase()));
-            
-            groupItems.forEach(item => { deletedReqIds.push(item.id.toUpperCase()); requestsList = requestsList.filter(r => r.id !== item.id); pushDataToBackend({ action: "delete", id: item.id }); });
-            saveDataToCache(); renderRequestCards(); showToast('🗑️ Data batch terhapus.', false);
-        }
-
-        function getNextId(prefix) { const fullPrefix = `${prefix}-${generateDateStringForId()}-`; let maxCount = 0; requestsList.forEach(req => { if (req.id && String(req.id).startsWith(fullPrefix)) { const numPart = parseInt(String(req.id).split('-').pop(), 10); if (!isNaN(numPart) && numPart > maxCount) maxCount = numPart; } }); return `${fullPrefix}${(maxCount + 1)}`; }
         const generateDateStringForId = () => { const now = new Date(); return `${String(now.getDate()).padStart(2, '0')}${String(now.getMonth() + 1).padStart(2, '0')}${now.getFullYear()}`; };
+        const getFormattedDateTime = () => { return new Date().toISOString(); };
+
+        function getNextId(prefix) {
+            const fullPrefix = `${prefix}-${generateDateStringForId()}-`; let maxCount = 0;
+            requestsList.forEach(req => {
+                if (req.id && String(req.id).startsWith(fullPrefix)) {
+                    const numPart = parseInt(String(req.id).split('-').pop(), 10);
+                    if (!isNaN(numPart) && numPart > maxCount) maxCount = numPart;
+                }
+            }); return `${fullPrefix}${(maxCount + 1)}`;
+        }
 
         function pushDataToBackend(payload) {
             const webUrl = DEFAULT_WEBAPP_URL; if(!webUrl || webUrl.trim() === '' || webUrl.includes("TARUH_URL_APPS_SCRIPT")) return; 
             fetch(webUrl + "?t=" + new Date().getTime(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) }).catch(err => {}); 
         }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            try {
+                const siteEl = document.getElementById('inputKodeSite'), tujuanEl = document.getElementById('inputTujuan'), pengirimanEl = document.getElementById('inputPengiriman');
+                if(!siteEl || !tujuanEl || !pengirimanEl) return;
+                
+                const kodeSite = String(siteEl.value).trim().toUpperCase(), tujuan = String(tujuanEl.value) || 'Retur', pengiriman = String(pengirimanEl.value) || 'CSS / JNE';
+                const matchedSite = siteMapData.get(kodeSite) || { name: kodeSite, branch: '-' };
+                
+                const rows = document.querySelectorAll('.sku-item-row'); let validItems = [];
+                rows.forEach(row => {
+                    const skuInput = row.querySelector('.dyn-sku-code'), qtyInput = row.querySelector('.dyn-qty');
+                    const skuCode = String(skuInput.value).trim().toUpperCase(), qty = parseInt(qtyInput.value) || 0;
+                    if (skuCode && qty > 0) { const matchedArtikel = artikelMapData.get(skuCode) || { desc: 'Manual Item', mc: '-', price: 0 }; validItems.push({ skuCode, qty, matchedArtikel }); }
+                });
+                if (validItems.length === 0) return showToast('⚠️ Minimal 1 artikel wajib diisi!', true);
+                
+                const timestamp = String(getFormattedDateTime());
+                let batchedReq = [];
+                validItems.forEach(item => {
+                    const cleanPrice = cleanNumberStr(item.matchedArtikel.price), multiBin = getMultiBinCode(item.skuCode);
+                    const newReq = {
+                        id: String(getNextId('REQ')), timestamp: timestamp, kodeSite: String(kodeSite), siteName: String(matchedSite.name), branch: String(matchedSite.branch),
+                        skuCode: String(item.skuCode), skuDesc: String(item.matchedArtikel.desc), mcLevel: String(item.matchedArtikel.mc), binCode: String(multiBin),
+                        qty: item.qty, hargaSatuan: cleanPrice, totalHarga: cleanPrice * item.qty, tujuan: String(tujuan), pengiriman: String(pengiriman), 
+                        status: 'Waiting Process', noSto: '', keterangan: '', keteranganProses: '', durasiRespons: 0
+                    };
+                    requestsList.unshift(newReq); batchedReq.push(newReq);
+                });
+                
+                const webUrl = DEFAULT_WEBAPP_URL; 
+                if(webUrl && webUrl.trim() !== '' && !webUrl.includes("TARUH_URL")) { fetch(webUrl + "?t=" + new Date().getTime(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: "insertBatch", requests: batchedReq }) }).catch(err => {}); }
+                
+                saveDataToCache(); const form = document.getElementById('requestForm'); if(form) form.reset();
+                const container = document.getElementById('dynamicSkuContainer');
+                if (container) container.innerHTML = `<div class="sku-item-row flex items-start gap-3 p-3 cekung border border-slate-300/30 dark:border-slate-700/30 rounded-xl relative"><div class="flex-1 relative"><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">SKU Code</label><input type="text" required autocomplete="off" spellcheck="false" placeholder="INPUT SKU" oninput="onDynamicSkuChange()" class="dyn-sku-code cekung w-full px-3 py-2 text-xs font-black uppercase text-slate-800 dark:text-slate-200"><span class="dyn-match-badge hidden absolute right-3 top-7 text-sm text-emerald-500"><i class="fa-solid fa-circle-check"></i></span></div><div class="w-20 sm:w-24"><label class="block text-[10px] font-black text-slate-600 dark:text-slate-400 uppercase mb-1">Qty</label><input type="number" required min="1" placeholder="0" oninput="onDynamicSkuChange()" autocomplete="off" class="dyn-qty cekung w-full px-3 py-2 text-xs font-black text-slate-800 dark:text-slate-200"></div></div>`;
+                
+                resetSiteResp(); resetOtherFormResps(); onDynamicSkuChange(); refreshCoreUI(); showToast('✅ Berhasil Disubmit!', false);
+            } catch (error) { showToast('❌ Gagal Mengirim', true); }
+        }
+
+        function updateMenuNotificationIndicator() {
+            const activeReqs = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
+            
+            // Hitungan Badge di Data Input Navigasi
+            const returCount = activeReqs.filter(r => (r.tujuan === 'Retur' || r.tujuan === 'Endless Aisle') && r.status === 'Waiting Process').length;
+            const reqCount = activeReqs.filter(r => r.tujuan === 'Req Cust' && r.status === 'Waiting Process').length;
+            const pesananCount = activeReqs.filter(r => r.tujuan === 'Pesanan Cust' && r.status === 'Waiting Process').length;
+            
+            const badgeRetur = document.getElementById('badge-tab-retur'); if(badgeRetur) { badgeRetur.innerText = returCount; if(returCount > 0) badgeRetur.classList.remove('hidden'); else badgeRetur.classList.add('hidden'); }
+            const badgeReq = document.getElementById('badge-tab-req'); if(badgeReq) { badgeReq.innerText = reqCount; if(reqCount > 0) badgeReq.classList.remove('hidden'); else badgeReq.classList.add('hidden'); }
+            const badgePesanan = document.getElementById('badge-tab-pesanan'); if(badgePesanan && !isViewPesananCust) { badgePesanan.innerText = pesananCount; }
+            
+            // Indikator Titik Merah Menu Samping Utama
+            const totalWait = returCount + reqCount + pesananCount;
+            const lamp = document.getElementById('menuNotificationLamp'); if (lamp) { if (totalWait > 0) lamp.classList.remove('hidden'); else lamp.classList.add('hidden'); }
+            const badgeTotal = document.getElementById('badge-total-requests'); if (badgeTotal) { badgeTotal.innerText = totalWait; if(totalWait > 0) badgeTotal.classList.remove('hidden'); else badgeTotal.classList.add('hidden'); }
+        }
+
         function showToast(title, isWarning=false) {
             const container = document.getElementById('toast-container'); if(!container) return;
-            const toast = document.createElement('div'), color = isWarning ? 'rose' : 'brand';
-            toast.className = `cembung px-5 py-3 flex items-center gap-3 transform transition-all duration-300 -translate-y-4 opacity-0 pointer-events-auto z-[100] border border-${color}-500 text-sm font-black`;
-            toast.innerHTML = title; container.appendChild(toast); 
+            const toast = document.createElement('div'), color = isWarning ? 'rose' : 'brand', icon = isWarning ? 'fa-triangle-exclamation' : 'fa-check';
+            toast.className = `cembung text-slate-800 dark:text-white px-5 py-3 flex items-center justify-center gap-3 transform transition-all duration-300 -translate-y-4 opacity-0 pointer-events-auto w-max relative z-[100] text-sm border border-slate-300/30 dark:border-slate-700/50 shadow-2xl`;
+            toast.innerHTML = `<div class="w-6 h-6 rounded-full text-white bg-${color}-500 flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid ${icon} text-[11px]"></i></div><h5 class="font-black text-slate-900 dark:text-slate-100">${title}</h5>`;
+            container.appendChild(toast); 
             requestAnimationFrame(() => toast.classList.remove('-translate-y-4', 'opacity-0')); 
             setTimeout(() => { toast.classList.add('opacity-0', '-translate-y-4'); setTimeout(() => toast.remove(), 300); }, 3000);
         }
@@ -867,92 +1171,392 @@
             try {
                 const res = await fetch(`${webUrl}?t=${new Date().getTime()}`, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: "read" }) });
                 const text = await res.text(); if (!text || text.trim().startsWith('<')) return;
-                const data = safeJSONParse(text); if (!data || !data.requestsList) return;
-                if (data.masterSite && data.masterSite.length > 0) masterSite = data.masterSite;
-                if (data.masterArtikel && data.masterArtikel.length > 0) masterArtikel = data.masterArtikel;
-                if (data.inventoryBin && data.inventoryBin.length > 0) inventoryBin = data.inventoryBin;
-                if (data.masterPromo && data.masterPromo.length > 0) masterPromo = data.masterPromo;
-                if (data.masterNewArrival && data.masterNewArrival.length > 0) masterNewArrival = data.masterNewArrival;
-                buildHashMaps(); processIncomingRequests(data.requestsList); updateMasterPlaceholder();
+                const data = safeJSONParse(text); if (!data) return;
+                
+                let masterChanged = false;
+                if (data.rawSite && data.rawSite !== rawMasterSite) { rawMasterSite = data.rawSite; masterChanged = true; }
+                if (data.rawArtikel && data.rawArtikel !== rawMasterArtikel) { rawMasterArtikel = data.rawArtikel; masterChanged = true; }
+                if (data.rawBin && data.rawBin !== rawMasterBin) { rawMasterBin = data.rawBin; masterChanged = true; }
+                
+                if (masterChanged) { buildHashMaps(); saveDataToCache(); }
+                if (data.requestsList) processIncomingRequests(data.requestsList);
             } catch (err) {}
         }
 
+        async function syncDataFromSheetsBackground() {
+            if (isSyncing) return; const webUrl = DEFAULT_WEBAPP_URL; if (!webUrl || webUrl.trim() === '' || webUrl.includes("TARUH_URL_APPS_SCRIPT")) return;
+            isSyncing = true;
+            try {
+                const res = await fetch(`${webUrl}?t=${new Date().getTime()}`, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: "syncRequests" }) });
+                const text = await res.text(); if (!text || text.trim().startsWith('<')) { isSyncing = false; return; }
+                const data = safeJSONParse(text); if (!data || !data.requestsList) { isSyncing = false; return; }
+                processIncomingRequests(data.requestsList);
+            } catch (err) {} finally { isSyncing = false; }
+        }
+        
         function processIncomingRequests(serverRequests) {
-            const serverReqIds = new Set(); 
-            const tempReqList = serverRequests.map(r => {
-                let reqId = String(r['ID Permintaan'] || r.id || ''); serverReqIds.add(reqId.toUpperCase());
-                let pQty = Number(r['Qty'] || r.qty || 1), pSkuCode = String(r['SKU Code'] || r.skuCode || '-').toUpperCase(), pSiteCode = String(r['Kode Site'] || r.kodeSite || '-').toUpperCase();
+            const tempReqList = [], serverReqIds = new Set(); 
+            serverRequests.forEach(r => {
+                let reqId = String(r['ID Permintaan'] || r.id || ''); if (!reqId) return; 
+                if (deletedReqIds.includes(reqId.toUpperCase())) return;
+                serverReqIds.add(reqId.toUpperCase());
+                
+                let pending = pendingUpdates[reqId], parsedStatus = String(r['Status'] || r.status || 'Waiting Process'), parsedNoSto = String(r['No STO'] || r.noSto || ''), parsedKetProses = String(r['Keterangan Proses'] || r.keteranganProses || ''), parsedDurasi = Number(r['Durasi Respons'] || r.durasiRespons || 0);
+                if (pending) { if (parsedStatus === pending.status) { delete pendingUpdates[reqId]; } else if (Date.now() - pending.timestamp < 180000) { parsedStatus = pending.status; parsedNoSto = pending.noSto; parsedKetProses = pending.keteranganProses; parsedDurasi = pending.durasiRespons; } else { delete pendingUpdates[reqId]; } }
+                
+                let parsedQty = Number(r['Qty'] || r.qty || 1);
+                const tTujuan = String(r['Tujuan'] || r.tujuan || '').trim();
+                let tPengiriman = String(r['Pengiriman'] || r.pengiriman || ''); if (!tPengiriman || tPengiriman.trim() === '' || tPengiriman === '-') tPengiriman = 'CSS / JNE';
+
+                let parsedSkuCode = String(r['SKU Code'] || r.skuCode || '-').toUpperCase();
+                let parsedSiteCode = String(r['Kode Site'] || r.kodeSite || '-').toUpperCase();
+                
                 let skuDesc = String(r['SKU Description'] || r.skuDesc || '-'), mcLevel = String(r['MC Level 4'] || r.mcLevel || '-'), hargaSatuan = cleanNumberStr(r['Harga Satuan'] || r.hargaSatuan || 0);
-                let matchedArt = artikelMapData.get(pSkuCode); if (matchedArt) { skuDesc = matchedArt.desc; mcLevel = matchedArt.mc; hargaSatuan = cleanNumberStr(matchedArt.price); }
-                let siteName = String(r['Site Name'] || r.siteName || '-'), branch = String(r['Branch'] || r.branch || '-'); let matchedSite = siteMapData.get(pSiteCode); if (matchedSite) { siteName = matchedSite.name; branch = matchedSite.branch || '-'; }
-                return { id: reqId, timestamp: String(r['Timestamp'] || r.timestamp || '-'), kodeSite: pSiteCode, siteName: siteName, branch: branch, skuCode: pSkuCode, skuDesc: skuDesc, mcLevel: mcLevel, binCode: String(r['Bin Code'] || r.binCode || '-'), qty: pQty, hargaSatuan: hargaSatuan, totalHarga: hargaSatuan * pQty, tujuan: String(r['Tujuan'] || r.tujuan || 'Retur'), pengiriman: String(r['Pengiriman'] || r.pengiriman || ''), status: String(r['Status'] || r.status || 'Waiting Process'), noSto: String(r['No STO'] || r.noSto || ''), keterangan: String(r['Keterangan'] || r.keterangan || ''), keteranganProses: String(r['Keterangan Proses'] || r.keteranganProses || '') };
-            }).filter(r => r.id !== '' && !deletedReqIds.includes(r.id.toUpperCase()));
-            
+                let matchedArt = artikelMapData.get(parsedSkuCode);
+                if (matchedArt) { skuDesc = matchedArt.desc; mcLevel = matchedArt.mc; hargaSatuan = matchedArt.price; }
+
+                let siteName = String(r['Site Name'] || r.siteName || '-'), branch = String(r['Branch'] || r.branch || '-');
+                let matchedSite = siteMapData.get(parsedSiteCode);
+                if (matchedSite) { siteName = matchedSite.name; branch = matchedSite.branch || '-'; }
+
+                let binCode = getMultiBinCode(parsedSkuCode); if (binCode === 'N/A') binCode = String(r['Bin Code'] || r.binCode || '-');
+                let totalHarga = hargaSatuan * parsedQty;
+
+                let nCust = String(r['Nama Cust'] || r.namaCust || ''), nWa = String(r['No WA'] || r.noWa || ''), sTujuan = String(r['Store Tujuan'] || r.storeTujuan || ''), picT = String(r['PIC'] || r.pic || '');
+
+                tempReqList.push({ id: reqId, timestamp: String(r['Timestamp'] || r.timestamp || '-'), kodeSite: parsedSiteCode, siteName: siteName, branch: branch, skuCode: parsedSkuCode, skuDesc: skuDesc, mcLevel: mcLevel, binCode: binCode, qty: parsedQty, hargaSatuan: hargaSatuan, totalHarga: totalHarga, tujuan: tTujuan || 'Retur', pengiriman: tPengiriman, status: parsedStatus, noSto: parsedNoSto, keterangan: String(r['Keterangan'] || r.keterangan || ''), keteranganProses: parsedKetProses, durasiRespons: parsedDurasi, namaCust: nCust, noWa: nWa, storeTujuan: sTujuan, pic: picT });
+            });
+
             const now = Date.now();
             const keepLocalReqs = requestsList.filter(r => !serverReqIds.has(String(r.id).toUpperCase()) && (now - new Date(r.timestamp).getTime() < 180000) && !deletedReqIds.includes(r.id.toUpperCase()));
-            requestsList = [...keepLocalReqs, ...tempReqList.reverse()]; saveDataToCache(); renderRequestCards();
+            let newRequestsList = [...keepLocalReqs, ...tempReqList.reverse()];
+            
+            let dataChanged = false;
+            if (requestsList.length !== newRequestsList.length) { dataChanged = true; } else if (JSON.stringify(requestsList) !== JSON.stringify(newRequestsList)) { dataChanged = true; }
+            requestsList = newRequestsList; saveDataToCache();
+            if (dataChanged) { setTimeout(()=>refreshCoreUI(), 10); }
         }
 
-        // ======================= MASTER DATA =======================
+        // Tandai pesanan sebagai 'Done Ambil' (Instan)
+        function markAsDone(groupId) {
+            const parts = groupId.split('|'), kodeSite = parts[0], timestamp = parts[1], tujuan = parts[2];
+            const groupItems = requestsList.filter(r => r.kodeSite === kodeSite && r.timestamp === timestamp && r.tujuan === tujuan && !deletedReqIds.includes(r.id.toUpperCase()));
+            if (groupItems.length === 0) return;
+            
+            groupItems.forEach(item => {
+                item.status = "Done Ambil"; item.keteranganProses = "Selesai (Diambil)";
+                pushDataToBackend({ action: "update", id: item.id, status: "Done Ambil", keteranganProses: "Selesai (Diambil)" });
+            });
+            saveDataToCache(); refreshCoreUI(); showToast('✅ Status Selesai (Diambil)!');
+        }
+
+        function renderRequestCards() {
+            const grid = document.getElementById('requestsGrid'); if (!grid) return;
+            try {
+                const countLabel = document.getElementById('requestsCountLabel'), searchInput = document.getElementById('searchRequests'), filterStatus = document.getElementById('filterStatus'), dateRangeFilter = document.getElementById('dateRangeFilter');
+                const q = searchInput ? String(searchInput.value).toLowerCase() : '', statusFilter = filterStatus ? filterStatus.value : 'ALL';
+                let startDate = '', endDate = '';
+                if (dateRangeFilter && dateRangeFilter.value) { const dates = dateRangeFilter.value.split(' to '); startDate = dates[0]; endDate = dates.length > 1 ? dates[1] : dates[0]; }
+
+                const unifiedWarningBanner = document.getElementById('unifiedWarningBanner');
+                if (isAdminMode) {
+                    const activeReqs = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
+                    const wReturList = activeReqs.filter(r => r.tujuan === 'Retur' && r.status !== 'Waiting Process' && !['Done STO', 'Cancel'].includes(r.status));
+                    const wEAList = activeReqs.filter(r => r.tujuan === 'Endless Aisle' && r.status !== 'Waiting Process' && !['Done Transaksi', 'Cancel'].includes(r.status));
+                    const totalWarning = wReturList.length + wEAList.length;
+
+                    if (totalWarning > 0) {
+                        unifiedWarningBanner.innerHTML = `<div class="bg-rose-50 dark:bg-rose-900/20 border-l-4 border-l-rose-500 p-3 sm:p-4 rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 w-full border border-rose-200 dark:border-rose-800"><div class="flex items-start sm:items-center gap-3"><div class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 border border-rose-100 dark:border-rose-700 flex items-center justify-center shrink-0 shadow-sm"><i class="fa-solid fa-triangle-exclamation text-rose-500 text-lg animate-pulse"></i></div><div><div class="flex items-baseline gap-2"><p class="text-[11px] font-black text-rose-600 dark:text-rose-400 uppercase tracking-wide">PERINGATAN STATUS MENGGANTUNG!</p></div><div class="flex flex-wrap gap-2 mt-0.5 text-[10px] font-bold text-slate-500 dark:text-slate-400"><span>Retur: ${wReturList.length}</span> <span class="text-slate-300 dark:text-slate-600">|</span> <span>EA: ${wEAList.length}</span></div></div></div><button onclick="openWarningModal('retur')" class="w-full sm:w-auto px-4 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-black rounded-lg text-xs shadow-sm border border-rose-600 transition-colors flex items-center justify-center gap-2 shrink-0"><i class="fa-solid fa-expand"></i> Detail</button></div>`;
+                        unifiedWarningBanner.classList.remove('hidden');
+                    } else unifiedWarningBanner.classList.add('hidden');
+                } else if (unifiedWarningBanner) unifiedWarningBanner.classList.add('hidden');
+
+                let cleanRequestsList = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
+                
+                // FILTER SESUAI TAB (Retur vs Req Cust/Pesanan)
+                if(activeDaftarTab === 'retur-ea') {
+                    cleanRequestsList = cleanRequestsList.filter(r => r.tujuan === 'Retur' || r.tujuan === 'Endless Aisle');
+                } else {
+                    if(isViewPesananCust) {
+                        cleanRequestsList = cleanRequestsList.filter(r => r.tujuan === 'Pesanan Cust');
+                    } else {
+                        cleanRequestsList = cleanRequestsList.filter(r => r.tujuan === 'Req Cust');
+                    }
+                }
+                
+                const filtered = cleanRequestsList.filter(item => {
+                    const matchQ = String(item.siteName || '').toLowerCase().includes(q) || String(item.skuCode || '').toLowerCase().includes(q) || String(item.skuDesc || '').toLowerCase().includes(q) || String(item.keterangan || '').toLowerCase().includes(q) || String(item.kodeSite || '').toLowerCase().includes(q) || String(item.namaCust || '').toLowerCase().includes(q);
+                    const matchStatus = statusFilter === 'ALL' || item.status === statusFilter;
+                    let matchDate = true;
+                    if (startDate || endDate) {
+                        let itemDate = String(item.timestamp).split('T')[0]; if(String(item.timestamp).includes(' ')) itemDate = String(item.timestamp).split(' ')[0].split('-').reverse().join('-');
+                        if (startDate && itemDate < startDate.split('-').reverse().join('-')) matchDate = false;
+                        if (endDate && itemDate > endDate.split('-').reverse().join('-')) matchDate = false;
+                    } else { if (!isViewAll && !['Waiting Process', 'On Proses'].includes(item.status)) matchDate = false; }
+                    return matchQ && matchStatus && matchDate;
+                });
+
+                const groupedRequests = new Map();
+                filtered.forEach(item => {
+                    const key = `${item.kodeSite}|${item.timestamp}|${item.tujuan}`;
+                    if (!groupedRequests.has(key)) {
+                        groupedRequests.set(key, { groupId: key, timestamp: item.timestamp, kodeSite: item.kodeSite, siteName: item.siteName, branch: item.branch, tujuan: item.tujuan, pengiriman: item.pengiriman, status: item.status, keterangan: item.keterangan, keteranganProses: item.keteranganProses, noSto: item.noSto, namaCust: item.namaCust, noWa: item.noWa, storeTujuan: item.storeTujuan, pic: item.pic, items: [], totalQty: 0, totalHarga: 0 });
+                    }
+                    const group = groupedRequests.get(key); group.items.push(item); group.totalQty += item.qty; group.totalHarga += item.totalHarga;
+                    if (group.status !== item.status) group.status = 'Mixed'; 
+                });
+
+                const groupedFiltered = Array.from(groupedRequests.values());
+
+                if(countLabel) countLabel.innerText = isViewAll || (startDate || endDate) ? `Menampilkan ${groupedFiltered.length} Grup Permintaan` : `${groupedFiltered.length} Grup Belum Diproses`;
+                if (groupedFiltered.length === 0) { grid.innerHTML = `<div class="col-span-full py-8 text-center cekung shadow-sm"><i class="fa-solid fa-folder-open text-3xl text-slate-400 dark:text-slate-600 mb-3"></i><p class="text-xs text-slate-500 dark:text-slate-500 font-bold">Tidak ada data ditemukan.</p></div>`; return; }
+
+                let currentGroupDate = '';
+                
+                const htmlString = groupedFiltered.map(group => {
+                    let badgeColor = 'bg-slate-200/50 text-slate-800 border-slate-300/50 dark:bg-slate-800/50 dark:text-slate-300 dark:border-slate-700';
+                    if(['Ready','Done Ambil','Selesai'].includes(group.status)) badgeColor = 'bg-emerald-500/10 text-emerald-700 border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-400 dark:border-emerald-500/20';
+                    if(['Keep','Di Lorong'].includes(group.status)) badgeColor = 'bg-brand-500/10 text-brand-700 border-brand-500/20 dark:bg-brand-500/10 dark:text-brand-400 dark:border-brand-500/20';
+                    if(['Done Transaksi','Di kasir','Done STO', 'Done Req Retur/EA'].includes(group.status)) badgeColor = 'bg-indigo-500/10 text-indigo-700 border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-400 dark:border-indigo-500/20';
+                    if(['Kosong','Cancel','No Stock'].includes(group.status)) badgeColor = 'bg-rose-500/10 text-rose-700 border-rose-500/20 dark:bg-rose-500/10 dark:text-rose-400 dark:border-rose-500/20';
+                    if(group.status === 'Damage') badgeColor = 'bg-amber-500/10 text-amber-700 border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-400 dark:border-amber-500/20';
+                    if(group.status === 'Mixed') badgeColor = 'bg-purple-500/10 text-purple-700 border-purple-500/20 dark:bg-purple-500/10 dark:text-purple-400 dark:border-purple-500/20';
+                    
+                    const displayStatus = group.status === 'Mixed' ? 'Status Berbeda' : group.status;
+                    const statusIcon = group.status === 'Mixed' ? '<i class="fa-solid fa-layer-group text-purple-500"></i>' : getStatusIcon(group.status);
+                    
+                    let textKeteranganUpdate = group.keteranganProses ? `<div class="mt-2.5 cekung p-2.5 shadow-inner"><span class="text-[10px] font-black text-slate-600 dark:text-slate-400 block mb-1"><i class="fa-solid fa-comment-dots text-brand-500"></i> Update Keterangan:</span><p class="text-[11px] font-bold text-slate-800 dark:text-slate-200 break-words whitespace-pre-line">${group.keteranganProses}</p></div>` : '';
+                    let actionBtn = `<button onclick="deleteGroupRequest('${group.groupId}')" class="admin-only bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 dark:text-rose-400 w-6 h-6 rounded-md flex items-center justify-center shrink-0 border border-rose-500/20 shadow-sm ml-1.5 transition-colors" title="Hapus Data"><i class="fa-solid fa-trash text-[10px]"></i></button>`;
+
+                    let groupHtml = '';
+                    if (isViewAll) {
+                        let d = parseDateSafe(group.timestamp), groupLabel = "Tanggal Tidak Diketahui";
+                        if (!isNaN(d.getTime())) {
+                            const daysFull = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'], monthsFull = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                            groupLabel = `${daysFull[d.getDay()]}, ${String(d.getDate()).padStart(2, '0')} ${monthsFull[d.getMonth()]} ${d.getFullYear()}`;
+                        }
+                        if (groupLabel !== currentGroupDate) {
+                            groupHtml = `<div class="col-span-full flex items-center gap-3 mt-4 mb-2"><div class="h-px bg-slate-400/20 dark:bg-slate-700/50 flex-1"></div><span class="text-[11px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-wider cembung px-3 py-1 shadow-sm"><i class="fa-regular fa-calendar-days mr-1.5 text-brand-600 dark:text-brand-400"></i> Data Permintaan : ${groupLabel}</span><div class="h-px bg-slate-400/20 dark:bg-slate-700/50 flex-1"></div></div>`;
+                            currentGroupDate = groupLabel;
+                        }
+                    }
+
+                    // Card Template Variables
+                    let tujuanBadge = group.tujuan === 'Retur' ? "bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20" : 
+                                      (group.tujuan === 'Endless Aisle' ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20" : "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20");
+                    let itemsListHtml = group.items.slice(0,3).map(i => `<div class="flex items-center justify-between gap-2 border-b border-slate-400/20 dark:border-slate-700/30 pb-1.5 last:border-0 last:pb-0 pt-1.5 first:pt-0"><div class="flex-1 min-w-0"><span class="font-mono font-black text-brand-700 dark:text-brand-400 text-[10px]"><i class="fa-solid fa-barcode text-brand-500"></i> ${i.skuCode}</span><p class="text-[10px] font-black text-slate-800 dark:text-slate-100 truncate">${i.skuDesc}</p></div><span class="text-slate-800 dark:text-slate-200 font-black cembung px-1.5 py-0.5 rounded text-[10px] shadow-sm shrink-0">Qty: ${i.qty}</span></div>`).join('');
+                    
+                    // Box Khusus Informasi Pesanan Cust
+                    let custInfoHtml = '';
+                    if (group.tujuan === 'Pesanan Cust') {
+                        custInfoHtml = `
+                        <div class="mt-2 p-2.5 bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800 rounded-lg text-[10px] shadow-sm">
+                            <div class="grid grid-cols-2 gap-y-1.5 gap-x-2">
+                                <div><span class="text-slate-500 dark:text-slate-400 font-bold block">Nama Cust:</span> <span class="font-black text-slate-800 dark:text-slate-200 break-words">${group.namaCust || '-'}</span></div>
+                                <div><span class="text-slate-500 dark:text-slate-400 font-bold block">No WA:</span> <span class="font-black text-slate-800 dark:text-slate-200 break-words">${group.noWa || '-'}</span></div>
+                                <div><span class="text-slate-500 dark:text-slate-400 font-bold block">Store Tujuan:</span> <span class="font-black text-slate-800 dark:text-slate-200 break-words">${group.storeTujuan || '-'}</span></div>
+                                <div><span class="text-slate-500 dark:text-slate-400 font-bold block">PIC:</span> <span class="font-black text-slate-800 dark:text-slate-200 break-words">${group.pic || '-'}</span></div>
+                            </div>
+                        </div>`;
+                    }
+
+                    // Aksi Bawah Card
+                    let actionBotBtn = `<button onclick="openGroupDetailModal('${group.groupId}')" class="btn-primary font-black py-1.5 px-3 rounded-lg text-xs transition-all shadow-md flex items-center gap-1.5"><i class="fa-solid fa-robot"></i> Proses Batch</button>`;
+                    if ((group.tujuan === 'Req Cust' || group.tujuan === 'Pesanan Cust') && group.status !== 'Done Ambil' && group.status !== 'Selesai' && group.status !== 'Cancel') {
+                         actionBotBtn = `<button onclick="markAsDone('${group.groupId}')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-black py-1.5 px-3 rounded-lg text-xs transition-all shadow-md flex items-center gap-1.5 border border-emerald-600"><i class="fa-solid fa-check-double"></i> TANDAI SELESAI</button>`;
+                    }
+
+                    return groupHtml + `<div class="cembung p-3.5 pb-12 flex flex-col justify-between relative text-sm"><div class="flex items-start justify-between mb-2"><div class="w-2/3 pr-2"><span class="font-mono font-black text-brand-700 dark:text-brand-400 cekung px-2 py-0.5 rounded text-[10px] inline-flex items-center gap-1"><i class="fa-solid fa-store"></i> ${group.kodeSite}</span><h4 class="font-black text-xs text-slate-900 dark:text-slate-100 break-words mt-1 leading-snug">${group.siteName}</h4><p class="text-[10px] text-slate-500 dark:text-slate-400 font-bold flex items-center gap-1 mt-0.5"><i class="fa-solid fa-code-branch"></i> ${group.branch}</p></div><div class="flex items-center shrink-0"><span class="px-2 py-0.5 rounded font-black text-[10px] border flex items-center gap-1.5 ${badgeColor}">${statusIcon} ${displayStatus}</span>${actionBtn}</div></div><div class="cekung p-2.5 shadow-sm mt-1.5 space-y-0 text-xs">${itemsListHtml}${group.items.length > 3 ? `<div class="text-center text-[10px] font-black text-brand-600 dark:text-brand-400 pt-2">+ ${group.items.length - 3} Artikel Lainnya</div>` : ''}</div>${custInfoHtml}<div class="flex justify-between items-center mt-2.5"><span class="${tujuanBadge} border px-2 py-1 rounded font-black text-[9px] shadow-sm uppercase flex items-center gap-1.5">${getTujuanIcon(group.tujuan)} ${group.tujuan}</span><div class="flex items-center gap-2"><span class="font-black text-slate-700 dark:text-slate-300 text-xs cekung px-2 py-1 flex items-center gap-1.5 shadow-sm"><i class="fa-solid fa-cubes text-slate-500"></i> ${group.totalQty}</span></div></div>${textKeteranganUpdate}<div class="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-[10px]"><span class="font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5"><i class="fa-regular fa-clock"></i> ${formatIndoDate(group.timestamp)}</span>${actionBotBtn}</div></div>`;
+                }).join('');
+                
+                grid.innerHTML = htmlString;
+                
+            } catch (err) {}
+        }
+
+        function resetDateFilter() { if(fpInstance) fpInstance.clear(); isViewAll = false; const btn = document.getElementById('btnViewAll'); if (btn) { btn.innerHTML = '<i class="fa-solid fa-list-ul"></i> View All'; btn.className = 'px-4 py-2.5 btn-cembung font-black rounded-lg text-xs transition-colors flex-1 sm:flex-none'; } setTimeout(()=>renderRequestCards(), 10); }
+        function toggleViewAll() { isViewAll = !isViewAll; const btn = document.getElementById('btnViewAll'); if (btn) { if (isViewAll) { btn.innerHTML = '<i class="fa-solid fa-eye"></i> Viewing All'; btn.className = 'px-4 py-2.5 btn-primary font-black rounded-lg text-xs transition-colors flex-1 sm:flex-none btn-view-all-active'; } else { btn.innerHTML = '<i class="fa-solid fa-list-ul"></i> View All'; btn.className = 'px-4 py-2.5 btn-cembung font-black rounded-lg text-xs transition-colors flex-1 sm:flex-none'; } } setTimeout(()=>renderRequestCards(), 10); }
+
+        function openGroupDetailModal(groupId) {
+            const parts = groupId.split('|'), kodeSite = parts[0], timestamp = parts[1], tujuan = parts[2];
+            const groupItems = requestsList.filter(r => r.kodeSite === kodeSite && r.timestamp === timestamp && r.tujuan === tujuan && !deletedReqIds.includes(r.id.toUpperCase()));
+            if (groupItems.length === 0) return;
+            
+            activeDetailReqIds = groupItems.map(r => r.id); const firstItem = groupItems[0];
+            const mSiteInfo = document.getElementById('mSiteInfo'); if(mSiteInfo) mSiteInfo.innerHTML = `<i class="fa-solid fa-store text-brand-500"></i> ${firstItem.kodeSite} - ${firstItem.siteName}`;
+            
+            const container = document.getElementById('mGroupedItemsContainer');
+            if (container) {
+                container.innerHTML = groupItems.map((item, idx) => {
+                    let bin = getMultiBinCode(item.skuCode); if (bin === 'N/A' && item.binCode !== '-') bin = item.binCode;
+                    return `<div class="cekung p-2.5 rounded-lg border border-slate-300/20 dark:border-slate-700/30"><div class="flex items-center justify-between mb-1"><span class="font-mono font-black text-brand-700 dark:text-brand-400 text-xs">${idx+1}. <i class="fa-solid fa-barcode"></i> ${item.skuCode}</span><span class="font-black text-slate-800 dark:text-slate-200 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded text-[10px]">Qty: ${item.qty}</span></div><div class="text-[11px] font-bold text-slate-800 dark:text-slate-200 break-words leading-tight">${item.skuDesc}</div><div class="flex justify-between items-center text-[10px] pt-1.5 mt-1.5 border-t border-slate-400/20 dark:border-slate-700/30 text-slate-500"><span><i class="fa-solid fa-layer-group"></i> ${item.mcLevel}</span><span><i class="fa-solid fa-boxes-stacked"></i> Bin: ${bin}</span></div></div>`;
+                }).join('');
+            }
+            
+            const mTotalArt = document.getElementById('mTotalArtikel'); if(mTotalArt) mTotalArt.innerText = groupItems.length;
+            const mq = document.getElementById('mQty'); if(mq) mq.innerText = groupItems.reduce((acc, curr) => acc + curr.qty, 0);
+            
+            const statusSelect = document.getElementById('modalStatusSelect');
+            if(statusSelect) {
+                let stts = [];
+                if (tujuan === 'Retur') stts = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done STO', 'Lainnya'];
+                else if (tujuan === 'Endless Aisle') stts = ['Waiting Process', 'Ready', 'Keep', 'Damage', 'Kosong', 'Cancel', 'Done Transaksi', 'Lainnya'];
+                else stts = ['Waiting Process', 'Selesai', 'Done Ambil', 'Cancel', 'Lainnya'];
+                statusSelect.innerHTML = stts.map(s => `<option value="${s}" ${firstItem.status===s?'selected':''}>${getStatusEmoji(s)} ${s}</option>`).join('');
+            }
+
+            const mik = document.getElementById('modalInputKeterangan'); if(mik) mik.value = firstItem.keteranganProses || '';
+            const minost = document.getElementById('modalInputNoSto'); if(minost) minost.value = firstItem.noSto || '';
+            onModalStatusChange();
+            const processBox = document.getElementById('internalProcessBox'); if (processBox) { if (isAdminMode) processBox.classList.remove('hidden'); else processBox.classList.add('hidden'); }
+
+            requestAnimationFrame(() => { const modal = document.getElementById('detailModal'), content = document.getElementById('detailModalContent'); if(modal && content) { modal.classList.remove('hidden'); requestAnimationFrame(() => content.classList.remove('scale-95', 'opacity-0')); } });
+        }
+
+        function closeDetailModal() { requestAnimationFrame(() => { const modal = document.getElementById('detailModal'), content = document.getElementById('detailModalContent'); if(content) content.classList.add('scale-95', 'opacity-0'); if(modal) setTimeout(() => modal.classList.add('hidden'), 150); activeDetailReqIds = []; }); }
+
+        function onModalStatusChange() {
+            const statusSelect = document.getElementById('modalStatusSelect'), stoContainer = document.getElementById('modalStoContainer'), ketLabel = document.getElementById('modalKetLabel');
+            if(!statusSelect || activeDetailReqIds.length === 0) return;
+            
+            if(stoContainer) { if(statusSelect.value === 'Done STO') stoContainer.classList.remove('hidden'); else stoContainer.classList.add('hidden'); }
+            if (ketLabel) { ketLabel.innerHTML = `<i class="fa-solid fa-comment-dots text-amber-500"></i> Update Keterangan <span class="text-slate-500 font-normal">(Opsional)</span>`; }
+        }
+
+        function updateRequestStatus() {
+            if (activeDetailReqIds.length === 0 || !isAdminMode) return; 
+            
+            const statusSelect = document.getElementById('modalStatusSelect'), inputNoStoEl = document.getElementById('modalInputNoSto');
+            if(!statusSelect || !inputNoStoEl) return;
+            const newNoSto = String(inputNoStoEl.value).trim() || '', newStatus = statusSelect.value || 'Waiting Process';
+            
+            const firstId = activeDetailReqIds[0]; let firstItem = requestsList.find(r => r.id === firstId); if(!firstItem) return;
+            const inputKetEl = document.getElementById('modalInputKeterangan'); const newKet = inputKetEl ? String(inputKetEl.value).trim() : '';
+            if (newStatus === 'Done STO' && !newNoSto) return showToast('⚠ Nomor STO wajib diisi.', true);
+
+            activeDetailReqIds.forEach(id => {
+                let item = requestsList.find(r => r.id === id); if(!item) return;
+                pendingUpdates[item.id] = { status: newStatus, keteranganProses: newKet, noSto: newNoSto, durasiRespons: item.durasiRespons||0, timestamp: Date.now() };
+                item.status = newStatus; item.keteranganProses = newKet; item.noSto = newNoSto;
+                pushDataToBackend({ action: "update", id: item.id, status: newStatus, keteranganProses: newKet, noSto: newNoSto });
+            });
+
+            saveDataToCache(); closeDetailModal(); refreshCoreUI(); showToast('✅ Status batch diperbarui.', false);
+            const warningModal = document.getElementById('warningModal'); if(warningModal && !warningModal.classList.contains('hidden')) openWarningModal(currentWarningTab);
+        }
+
+        function deleteGroupRequest(groupId) {
+            if (!isAdminMode) return;
+            const parts = groupId.split('|'), kodeSite = parts[0], timestamp = parts[1], tujuan = parts[2];
+            const groupItems = requestsList.filter(r => r.kodeSite === kodeSite && r.timestamp === timestamp && r.tujuan === tujuan && !deletedReqIds.includes(r.id.toUpperCase()));
+            
+            groupItems.forEach(item => {
+                deletedReqIds.push(item.id.toUpperCase());
+                requestsList = requestsList.filter(r => r.id !== item.id);
+                pushDataToBackend({ action: "delete", id: item.id });
+            });
+            
+            if(deletedReqIds.length > 1000) deletedReqIds = deletedReqIds.slice(deletedReqIds.length - 1000);
+            saveDataToCache(); refreshCoreUI(); showToast('🗑️ Data batch terhapus.', false);
+            const warningModal = document.getElementById('warningModal'); if(warningModal && !warningModal.classList.contains('hidden')) openWarningModal(currentWarningTab);
+        }
+
+        function updateDashboard() {
+            try {
+                const dashYearEl = document.getElementById('dashFilterYear'), dashMonthEl = document.getElementById('dashFilterMonth');
+                const dashYear = dashYearEl ? dashYearEl.value : 'ALL', dashMonth = dashMonthEl ? dashMonthEl.value : 'ALL';
+                
+                const activeReqs = requestsList.filter(r => !deletedReqIds.includes(r.id.toUpperCase()));
+                
+                const filteredReqs = activeReqs.filter(r => {
+                    const d = parseDateSafe(r.timestamp);
+                    if(isNaN(d.getTime())) return (dashYear === 'ALL' && dashMonth === 'ALL');
+                    if (dashYear !== 'ALL' && String(d.getFullYear()) !== dashYear) return false;
+                    if (dashMonth !== 'ALL' && String(d.getMonth()) !== dashMonth) return false;
+                    return true;
+                });
+
+                const returList = filteredReqs.filter(r => r.tujuan === 'Retur'), eaList = filteredReqs.filter(r => r.tujuan === 'Endless Aisle');
+                const totalNominalAll = filteredReqs.reduce((acc, cur) => acc + (cur.totalHarga||0), 0);
+                
+                const elTotal = document.getElementById('dash-total-count'); if(elTotal) elTotal.innerText = `${filteredReqs.length} Req`;
+                const elTotalNom = document.getElementById('dash-total-nominal'); if(elTotalNom) elTotalNom.innerText = `Rp ${totalNominalAll.toLocaleString('id-ID')}`;
+                
+                const elRetTot = document.getElementById('dash-retur-total'); if(elRetTot) elRetTot.innerText = `Rp ${returList.reduce((acc, cur) => acc + (cur.totalHarga||0), 0).toLocaleString('id-ID')}`;
+                const elRetCnt = document.getElementById('dash-retur-count'); if(elRetCnt) elRetCnt.innerText = `${returList.length} Req`;
+                const elEaTot = document.getElementById('dash-ea-total'); if(elEaTot) elEaTot.innerText = `Rp ${eaList.reduce((acc, cur) => acc + (cur.totalHarga||0), 0).toLocaleString('id-ID')}`;
+                const elEaCnt = document.getElementById('dash-ea-count'); if(elEaCnt) elEaCnt.innerText = `${eaList.length} Req`;
+                const elWait = document.getElementById('dash-waiting-count'); if(elWait) elWait.innerText = filteredReqs.filter(r => r.status === 'Waiting Process' || r.status === 'On Proses').length;
+            } catch (err) {}
+        }
+
         function setMasterTab(type) {
             activeMasterTab = type;
-            const btns = ['btnMasterSite', 'btnMasterArtikel', 'btnMasterBin', 'btnMasterPromo', 'btnMasterNewArrival'];
-            btns.forEach(bId => { const b = document.getElementById(bId); if(b) b.className = 'flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 dark:text-slate-400 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5'; });
-            const actBtn = document.getElementById({ 'site': 'btnMasterSite', 'artikel': 'btnMasterArtikel', 'bin': 'btnMasterBin', 'promo': 'btnMasterPromo', 'newarrival': 'btnMasterNewArrival' }[type]);
-            if(actBtn) actBtn.className = 'flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg btn-primary text-white transition-all duration-150 flex items-center justify-center gap-1.5';
-            
-            const pSel = document.getElementById('promoProgramSelector'); if(pSel) { if(type === 'promo') pSel.classList.remove('hidden'); else pSel.classList.add('hidden'); }
-            
-            if(type === 'promo') {
-                const list = document.getElementById('promoProgramList');
-                if(list) { const pSet = new Set(masterPromo.map(p=>p.program).filter(p=>p)); list.innerHTML = Array.from(pSet).map(p=>`<option value="${p}">`).join(''); }
-            }
-            updateMasterPlaceholder();
+            requestAnimationFrame(() => {
+                const btns = ['btnMasterSite', 'btnMasterArtikel', 'btnMasterBin'];
+                btns.forEach(bId => {
+                    const b = document.getElementById(bId); if(b) b.className = 'flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg text-slate-600 hover:text-slate-800 bg-transparent transition-all duration-150 flex items-center justify-center gap-1.5';
+                });
+                
+                const activeBtnMap = { 'site': 'btnMasterSite', 'artikel': 'btnMasterArtikel', 'bin': 'btnMasterBin' };
+                const actBtn = document.getElementById(activeBtnMap[type]);
+                if(actBtn) actBtn.className = 'flex-1 py-2.5 px-2 text-[10px] sm:text-xs font-black rounded-lg btn-primary text-white transition-all duration-150 flex items-center justify-center gap-1.5';
+                
+                updateMasterPlaceholder();
+            });
         }
 
         function updateMasterPlaceholder() {
             const textarea = document.getElementById('modalMasterDataInput'); if(!textarea) return;
             const type = activeMasterTab; let header = "", existingDataStr = "";
-            if (type === 'site') { header = "KODE SITE\tSITE NAME\tBRANCH\n---------------------------------\n"; existingDataStr = masterSite.slice(0, 50).map(s => `${s.kode}\t${s.name}\t${s.branch}`).join('\n'); }
-            else if (type === 'artikel') { header = "Article\tCross-Site\tArticle Description\tLv2-Description\tLv3-Description\tLv4-Description\tLoc Amount\tGender\tGender Group\n---------------------------------\n"; existingDataStr = masterArtikel.slice(0, 50).map(a => `${a.sku}\t-\t${a.desc}\t-\t-\t${a.mc}\t${a.price}\t-\t-`).join('\n'); }
-            else if (type === 'bin') { header = "SKU CODE\tBIN CODE\n---------------------------------\n"; existingDataStr = inventoryBin.slice(0, 50).map(b => `${b.sku}\t${b.bin}`).join('\n'); }
-            else if (type === 'promo') { header = "SKU CODE\tPERSENTASE (20%)\tNAMA PROMO\n---------------------------------\n"; existingDataStr = masterPromo.slice(0, 50).map(p => `${p.sku}\t${p.persentase}\t${p.name}`).join('\n'); }
-            else if (type === 'newarrival') { header = "SKU CODE\n---------------------------------\n"; existingDataStr = masterNewArrival.slice(0, 50).map(n => `${n.sku}`).join('\n'); }
-            textarea.value = existingDataStr.trim() === "" ? header + "(Kosong)" : header + existingDataStr + "\n... (+ data lainnya)"; textarea.setAttribute('data-is-placeholder', 'true');
+            if (type === 'site') { header = "KODE SITE\tSITE NAME\tBRANCH\n---------------------------------\n"; existingDataStr = rawMasterSite; }
+            else if (type === 'artikel') { header = "SKU CODE\tSKU DESCRIPTION\tMC LEVEL 4\tHARGA SATUAN\n---------------------------------\n"; existingDataStr = rawMasterArtikel; }
+            else if (type === 'bin') { header = "SKU CODE\tBIN CODE\n---------------------------------\n"; existingDataStr = rawMasterBin; }
+            
+            const arrData = existingDataStr ? existingDataStr.split(/\r?\n/) : [];
+            const isTooLarge = arrData.length > 50;
+            const textToDisplay = isTooLarge ? arrData.slice(0, 50).join('\n') + `\n... (+${arrData.length - 50} data lainnya tersimpan)` : existingDataStr;
+            textarea.value = textToDisplay.trim() === "" ? header + "(Kosong)" : header + textToDisplay;
+            textarea.setAttribute('data-is-placeholder', 'true');
         }
         
         function handleTextareaFocus(el) { if (el.getAttribute('data-is-placeholder') === 'true') { el.select(); el.value = ''; } }
         function handleTextareaInput(el) { el.setAttribute('data-is-placeholder', 'false'); }
 
-        function openMasterModal() { if(!isAdminMode) return; setMasterTab('site'); document.getElementById('masterDataModal').classList.remove('hidden'); requestAnimationFrame(() => document.getElementById('masterDataModalContent').classList.remove('scale-95', 'opacity-0')); }
-        function closeMasterModal() { document.getElementById('masterDataModalContent').classList.add('scale-95', 'opacity-0'); setTimeout(() => document.getElementById('masterDataModal').classList.add('hidden'), 150); }
+        function openMasterModal() { if(!isAdminMode) return; setMasterTab('site'); requestAnimationFrame(() => { const mmodal = document.getElementById('masterDataModal'), mmodalcont = document.getElementById('masterDataModalContent'); if(mmodal && mmodalcont) { mmodal.classList.remove('hidden'); requestAnimationFrame(()=>mmodalcont.classList.remove('scale-95', 'opacity-0')); } }); }
+        function closeMasterModal() { requestAnimationFrame(() => { const mmodalcont = document.getElementById('masterDataModalContent'), mmodal = document.getElementById('masterDataModal'); if(mmodalcont) mmodalcont.classList.add('scale-95', 'opacity-0'); if(mmodal) setTimeout(()=>mmodal.classList.add('hidden'), 150); }); }
 
         async function processMasterDataUpdate() {
             if(!isAdminMode) return; const textarea = document.getElementById('modalMasterDataInput'); if(!textarea) return;
             const type = activeMasterTab, text = textarea.value.trim();
             if (!text || text.includes("---------------------------------")) return showToast('⚠️ Paste data baru untuk menimpa.', true);
             
+            const pToast = document.getElementById('persistentLoadingToast'); 
+            if(pToast) { pToast.classList.remove('hidden'); requestAnimationFrame(()=>pToast.classList.remove('opacity-0')); }
+
             try {
-                const rows = text.split(/\r?\n/).filter(line => !line.includes('---') && !line.includes('KODE SITE') && !line.includes('Article') && !line.includes('SKU CODE')).map(line => line.split('\t'));
-                if (type === 'site') { masterSite = rows.filter(r => r[0] && String(r[0]).trim() !== '').map(r => ({ kode: String(r[0]||'').trim().toUpperCase(), name: String(r[1]||'').trim(), branch: String(r[2]||'').trim() })); }
-                else if (type === 'artikel') { masterArtikel = rows.filter(r => r[0] && String(r[0]).trim() !== '').map(r => ({ sku: String(r[0]||'').trim().toUpperCase(), desc: String(r[2]||'').trim(), mc: String(r[5]||'').trim(), price: cleanNumberStr(r[6]) })); }
-                else if (type === 'bin') { inventoryBin = rows.filter(r => r[0] && String(r[0]).trim() !== '').map(r => ({ sku: String(r[0]||'').trim().toUpperCase(), bin: String(r[1]||'').trim() })); }
-                else if (type === 'promo') { 
-                    const progName = document.getElementById('inputPromoProgram').value.trim();
-                    if(!progName) return showToast('❌ Pilih Program Promo!', true);
-                    const newPromos = rows.filter(r => r[0] && String(r[0]).trim() !== '').map(r => ({ sku: String(r[0]||'').trim().toUpperCase(), persentase: String(r[1]||'').trim(), name: String(r[2]||'').trim(), program: progName }));
-                    masterPromo = masterPromo.filter(p => p.program !== progName); masterPromo = [...masterPromo, ...newPromos];
-                }
-                else if (type === 'newarrival') { masterNewArrival = rows.filter(r => r[0] && String(r[0]).trim() !== '').map(r => ({ sku: String(r[0]||'').trim().toUpperCase() })); }
+                // String murni yang akan dipotong dan dikirim
+                let cleanRawString = text.split(/\r?\n/).filter(line => !line.includes('---') && !line.includes('SKU CODE') && !line.includes('KODE SITE')).join('\n');
+
+                if (type === 'site') rawMasterSite = cleanRawString;
+                else if (type === 'artikel') rawMasterArtikel = cleanRawString;
+                else if (type === 'bin') rawMasterBin = cleanRawString;
 
                 buildHashMaps(); saveDataToCache();
+                
                 const webUrl = DEFAULT_WEBAPP_URL;
-                if(webUrl && webUrl.trim() !== '' && !webUrl.includes("TARUH_URL_APPS_SCRIPT")) {
-                    const payload = { action: "updateMaster", type: type, payload: (type === 'site') ? masterSite : ((type === 'artikel') ? masterArtikel : (type === 'bin' ? inventoryBin : (type === 'promo' ? masterPromo : masterNewArrival))) };
-                    await fetch(webUrl + "?t=" + new Date().getTime(), { method: 'POST', body: JSON.stringify(payload) });
+                if(!webUrl || webUrl.trim() === '' || webUrl.includes("TARUH_URL_APPS_SCRIPT")) {
+                    if(pToast) pToast.classList.add('hidden'); closeMasterModal(); return showToast('✅ Data tersimpan di HP/PC sementara.', false);
                 }
-                closeMasterModal(); showToast('✅ Master tersimpan.', false);
-            } catch (err) { showToast('❌ Gagal simpan data.', true); }
+                
+                const payload = { action: "updateMaster", type: type, payload: cleanRawString };
+                await fetch(webUrl + "?t=" + new Date().getTime(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
+                
+                if(pToast) pToast.classList.add('hidden'); closeMasterModal(); showToast('⚡ Master Data berhasil diperbarui!', false);
+            } catch (err) { 
+                if(pToast) pToast.classList.add('hidden'); 
+                showToast('❌ Gagal sinkronisasi server.', true); 
+            }
         }
     </script>
 </body>
