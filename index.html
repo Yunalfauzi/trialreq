@@ -703,7 +703,7 @@
 
                 <div>
                     <label class="block font-black text-slate-700 dark:text-slate-400 uppercase mb-1.5"><i class="fa-solid fa-paste"></i> Paste Data (CTRL+V) Pada kotak di bawah ini...</label>
-                    <textarea id="modalMasterDataInput" rows="10" onclick="handleTextareaFocus(this)" oninput="handleTextareaInput(this)" class="cekung w-full px-3 py-2.5 font-mono font-bold resize-y whitespace-pre text-slate-800 dark:text-slate-200 transition-colors" autocomplete="off" spellcheck="false" data-is-placeholder="true"></textarea>
+                    <textarea id="modalMasterDataInput" rows="10" onclick="handleTextareaFocus(this)" oninput="handleTextareaInput(this)" onpaste="handleTextareaPaste(event)" class="cekung w-full px-3 py-2.5 font-mono font-bold resize-y whitespace-pre text-slate-800 dark:text-slate-200 transition-colors" autocomplete="off" spellcheck="false" data-is-placeholder="true"></textarea>
                 </div>
             </div>
             <div class="p-4 flex justify-between shrink-0 border-t border-slate-400/20 dark:border-slate-700/30">
@@ -750,6 +750,7 @@
         let rawMasterSite = "", rawMasterArtikel = "", rawMasterBin = "", rawMasterPromo = "", rawMasterNewArrival = ""; 
         let requestsList = []; let pendingUpdates = {}, activeDetailReqIds = [];
         let deletedReqIds = []; let isSyncing = false; 
+        let currentRawPaste = ""; // Buffer khusus untuk Paste Data Raksasa
 
         let chartResponseInstance = null; // Tambahan untuk grafik respon
 
@@ -2395,18 +2396,45 @@
             const textToDisplay = isTooLarge ? arrData.slice(0, 50).join('\n') + `\n... (+${arrData.length - 50} data lainnya tersimpan)` : existingDataStr;
             textarea.value = textToDisplay.trim() === "" ? header + "(Kosong)" : textToDisplay;
             textarea.setAttribute('data-is-placeholder', 'true');
+            currentRawPaste = "";
         }
         
-        function handleTextareaFocus(el) { if (el.getAttribute('data-is-placeholder') === 'true') { el.select(); el.value = ''; } }
-        function handleTextareaInput(el) { el.setAttribute('data-is-placeholder', 'false'); }
+        function handleTextareaFocus(el) { if (el.getAttribute('data-is-placeholder') === 'true') { el.select(); el.value = ''; currentRawPaste = ""; } }
+        
+        function handleTextareaInput(el) { 
+            if(currentRawPaste !== "") showToast('⚠️ Edit manual membatalkan Paste Besar. Harap paste ulang.', true);
+            el.setAttribute('data-is-placeholder', 'false'); 
+            currentRawPaste = ""; 
+        }
+
+        function handleTextareaPaste(e) {
+            e.preventDefault(); // Mencegah browser freeze/nge-lag
+            const pasteData = (e.clipboardData || window.clipboardData).getData('text');
+            const el = e.target;
+            el.setAttribute('data-is-placeholder', 'false');
+            currentRawPaste = pasteData; // Simpan aslinya di memori
+            
+            const arrData = pasteData.split(/\r?\n/);
+            if(arrData.length > 50) {
+                // Tampilkan preview 50 baris saja agar super cepat
+                el.value = arrData.slice(0, 50).join('\n') + `\n\n... [✅ PASTE CEPAT SUKSES: Total ${arrData.length} Baris Tersalin. KLIK SIMPAN PERMANEN!]`;
+            } else {
+                el.value = pasteData;
+            }
+        }
 
         function openMasterModal() { if(!isAdminMode) return; setMasterTab('site'); requestAnimationFrame(() => { const mmodal = document.getElementById('masterDataModal'), mmodalcont = document.getElementById('masterDataModalContent'); if(mmodal && mmodalcont) { mmodal.classList.remove('hidden'); requestAnimationFrame(()=>mmodalcont.classList.remove('scale-95', 'opacity-0')); } }); }
         function closeMasterModal() { requestAnimationFrame(() => { const mmodalcont = document.getElementById('masterDataModalContent'), mmodal = document.getElementById('masterDataModal'); if(mmodalcont) mmodalcont.classList.add('scale-95', 'opacity-0'); if(mmodal) setTimeout(()=>mmodal.classList.add('hidden'), 150); }); }
 
         async function processMasterDataUpdate() {
             if(!isAdminMode) return; const textarea = document.getElementById('modalMasterDataInput'); if(!textarea) return;
-            const type = activeMasterTab, text = textarea.value.trim();
-            if (!text || text.includes("Tersimpan dalam JSON")) return showToast('⚠️ Paste data baru untuk menimpa.', true);
+            
+            if (textarea.getAttribute('data-is-placeholder') === 'true') return showToast('⚠️ Silakan klik kotak & Paste (CTRL+V) data baru.', true);
+            
+            const type = activeMasterTab;
+            const text = currentRawPaste ? currentRawPaste.trim() : textarea.value.trim(); // Ambil dari buffer jika paste besar
+            
+            if (!text || text.includes("(Kosong)")) return showToast('⚠️ Data kosong, paste data baru.', true);
             
             let dataToSave = "";
 
